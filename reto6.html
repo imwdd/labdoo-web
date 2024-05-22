@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/boladelmundo.png">
+    <title>Manteniment del servidor - Projecte Labdoo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      function myFunction(id) {
+        let copyText = document.getElementById(id);
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.textContent);
+        // Alert the copied text
+        alert("Comanda copiada: " + copyText.textContent);
+      }
+      </script>
+  </head>
+  <body>
+    
+    <!--          Header          -->
+
+    <header class="header">
+        <div class="container">
+        <div class="divlogo">
+            <a href="index.html"><img src="images/logo-labdoo.png" alt="Logo Labdoo" class="logo_labdoo"></a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link"><a href="index.html"><img src="images/homepage.png" class="icono-navbar"></a></li>
+                <li class="nav-link"><a href="formulario.html"><img src="images/formulario.png" class="icono-navbar"></a></li>      
+                <li class="nav-link"><a href="equipo.html"><img src="images/equipo.png" class="icono-navbar"></a></li> 
+                <li class="nav-link-d"><img src="images/menu.png" class="icono-navbar">
+                    <div class="dropdown-content">
+                      <a href="reto1.html" class="no-active-reto">Elecció de la infraestructura</a>
+                      <a href="reto2.html" class="no-active-reto">Disseny i implementació de la infraestructura física i lògica</a>
+                      <a href="reto3.html" class="no-active-reto">Instal·lació dels servidors</a>
+                      <a href="reto4.html" class="no-active-reto">Creació d'usuaris i gestió de permisos i polítiques i directives</a>
+                      <a href="reto6.html" class="active-reto">Manteniment del nostre servidor</a>
+                      <a href="reto7.html" class="no-active-reto">Documentació web del projecte</a>
+                      <a href="reto8.html" class="no-active-reto">Protecció de la nostra xarxa</a>
+                      <a href="reto9.html" class="no-active-reto">Protecció de les nostres dades</a>
+                      <a href="reto10.html" class="no-active-reto">Implementació de servidors Linux i Windows</a>
+                      <a href="reto5.html" class="no-active-reto">Sanejament de portàtils Labdoo</a>
+                      </div>
+                </li>            
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div class="flecha-index">
+      <a href="#index">
+          <img src="images/flecha.png" class="flecha-index">
+      </a>
+    </div>
+
+    <section class="section-retos-enunciat">
+      <header class="headerfase">
+          <h2>MANTENIMENT DEL NOSTRE SERVIDOR</h2>
+      </header>
+      <div class="enunciat-reto-70">
+        <p class="enunciat-reto-titulo">L'encàrrec consisteix en:</p>
+        <p class="enunciat-reto-p">Una vegada hem rebut el nostre servidor físic:</p>
+        <ul>
+          <li class="enunciat-lista">Neteja</li>
+            <li class="enunciat-lista2">El servidor i els seus components han d'estar nets.</li>
+          <li class="enunciat-lista">Maquinària</li>
+            <li class="enunciat-lista2">El servidor ha d'estar correctament configurat, el servidor ha de complir amb els següents requisits:</li>
+              <li class="enunciat-lista3">Ha de funcionar correctament</li>
+              <li class="enunciat-lista3">Ha de tenir la pasta tèrmica canviada</li>
+              <li class="enunciat-lista3">Ha de tenir tots els components necessaris per al correcte funcionament</li>
+              <li class="enunciat-lista3">En cas de necessitar una modificació dels components s'ha de jusitificar,
+                això vol dir que s'ha de tenir una fitxa tècnica del nostre servidor i una petita explicació dels components escollits.
+              </li>
+            <li class="enunciat-lista">Sistema Operatiu</li>
+              <li class="enunciat-lista2">S'ha de justificar el sistema operatiu escollit</li>
+            <li class="enunciat-lista">Sistema Operatiu Actualitzat</li>
+              <li class="enunciat-lista2">El nostre servidor ha de tenir les actualitzacions necessàries per poder funcionar.</li>
+            <li class="enunciat-lista">Disc dur i particions</li>
+              <li class="enunciat-lista2">Cada grup disposa d'un disc SSD i un disc dur HDD 1TB, s'ha de justificar l'elecció de particions en cas de tenir-ne i com hem configurat el disc dur.</li>
+            <li class="enunciat-lista">Còpies de seguretat</li>
+              <li class="enunciat-lista2">S'ha de despondre d'un sistema de còpies de seguretat, l'elecció és lliure sempre que es justifiqui l'elecció escollida.</li>
+            <li class="enunciat-lista">Actualització de programari</li>
+              <li class="enunciat-lista2">S'ha de justificar el programari escollit i les seves actualitzacions.</li>
+        </ul>
+      </div>
+      <div class="div-planol-pr">
+        <img src="images/servidorlargo.png" alt="Imatge d'un servidor" class="I-topologia">
+        <img src="images/ciudad-componentes.jpeg" alt="Imatge d'una ciutat dins una placa mare" class="I-topologia">
+      </div>
+      <div class="div-index" id="index">
+        <header class="headerfase">
+            <h2>CONTINGUT</h2>
+        </header>
+        <ul class="ul-index">
+            <li class="li-index"><a href="#neteja">Neteja</a></li>
+            <li class="li-index"><a href="#maquinaria">Maquinària</a></li>
+            <li class="li-index"><a href="#sistemaoperatiu">Sistema Operatiu</a></li>
+            <li class="li-index"><a href="#discdur">Disc dur</a></li>
+            <li class="li-index"><a href="#copiesseguretat">Còpies de seguretat</a></li>
+        </ul>
+    </div>
+    <div class="enunciat-reto-70" id="neteja">
+      <h3 class="enunciat-reto-titulo">NETEJA</h3>
+      <p class="enunciat-reto-p">El manteniment d'una torre de PC és important per garantir un rendiment òptim i una vida útil més llarga del sistema. El passos que hem seguir nosaltres son aquests:</p>
+      <ul>
+        <li class="enunciat-lista">Apaguem el PC</li>
+          <li class="enunciat-lista2">Abans de començar, assegurem-nos que el nostre ordinador estigui totalment apagat i desconnectat de la corrent elèctrica. Això evita qualsevol risc elèctric i permet que puguem treballar amb seguretat.</li>
+        <li class="enunciat-lista">Desmuntem la torre</li>
+          <li class="enunciat-lista2">Desmuntem la tapa lateral de la torre per tenir accés als components interns. Això generalment es fa desenroscant uns cargols situats a la part posterior de la torre.</li>
+        <li class="enunciat-lista">Utilitzem aire comprimit</li>
+          <li class="enunciat-lista2">Amb l'ajuda d'una màquina d'aire comprimit, dirigim el corrent d'aire cap als ventiladors del processador, la targeta gràfica i altres components. 
+            Mantinguem la màquina en posició vertical i utilitzem ràfages de 2-5 segons màxim de duració per evitar possibles desperfectes als nostres components.</li>
+        <li class="enunciat-lista">Netegem els ventiladors</li>
+          <li class="enunciat-lista2">Aturem els ventiladors amb els nostres dits per evitar que giri mentre els netegem. Això evita que es generi corrent elèctric quan utilitzem l'aire comprimit i també ens permet netejar millor la pols acumulada.</li>
+        <li class="enunciat-lista">Cuidem els connectors i slots</li>
+          <li class="enunciat-lista2">Assegurem-nos de netejar també els connectors, com els de les targetes de memòria RAM i les targetes d'expansió. Utilitzem un pinzell petit amb molta cura per eliminar la pols dels connectors.</li>
+        <li class="enunciat-lista">Netegem els cables</li>
+          <li class="enunciat-lista2">Revisem els cables interns i els netegem de pols. Això no només millorarà l'aspecte interior, sinó que també ajudarà a mantenir una millor circulació d'aire.</li>
+        </ul>
+    </div>
+    <div class="div-planol-pr">
+      <img src="images/foto-neteja.png" alt="Foto neteja" class="I-neteja">
+      <img src="images/foto-pc.png" alt="Foto PC" class="I-neteja">
+    </div>
+    <div class="enunciat-reto-wrap" id="maquinaria">
+      <h3 class="enunciat-reto-titulo">MAQUINÀRIA</h3>
+      <p class="enunciat-reto-p">Un cop netejat i connectat correctament tots els components hem comprovat si funciona, també hem fet una fitxa tècnica per a un major coneixement del nostre PC.</p>
+      <div class="contenedor-padre-card">
+        <div class="card">
+          <img src="images/procesador.png">
+          <div class="card-content">
+            <p class="card-title">Processador</p>
+            <p class="card-subtitle">Intel Core i5-7400 3.00GHz</p>
+            <p class="card-description">Per defecte, ens venia un processador Intel Pentium però atès que no complia amb els 
+              requisits mínims dels nostres sistemes operatius vam decidir reemplaçar-lo per un Intel Core i5-7400.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/placa-base.png">
+          <div class="card-content">
+            <p class="card-title">Placa base</p>
+            <p class="card-subtitle">GIGABYTE GA-H71M-S2H</p>
+            <p class="card-description">Per defecte</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/memoriaram.png">
+          <div class="card-content">
+            <p class="card-title">Memòria RAM</p>
+            <p class="card-subtitle">Crucial 8GB DDR3 x 2 (16GB)</p>
+            <p class="card-description">Ens venien per defecte 4GB però per complir amb els requisits recomanats de 16GB hem afegit 12GB més.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/discoduro1.png">
+          <div class="card-content">
+            <p class="card-title">Disc dur 1</p>
+            <p class="card-subtitle">Crucial MX500 SSD 250GB</p>
+            <p class="card-description">Per defecte</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/discoduro2.png">
+          <div class="card-content">
+            <p class="card-title">Disc dur 2</p>
+            <p class="card-subtitle">WD Green HDD 1TB</p>
+            <p class="card-description">No ens venia per defecte però el professor ens ha demanat utilitzar-lo per emmagatzemar les còpies de seguretat.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/fuente-alimentacion.png">
+          <div class="card-content">
+            <p class="card-title">Font d'alimentació</p>
+            <p class="card-subtitle">Energy Power 500W</p>
+            <p class="card-description">Per defecte</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/lector-tarjetas.png">
+          <div class="card-content">
+            <p class="card-title">Lector de tarjetes</p>
+            <p class="card-subtitle">Kloner</p>
+            <p class="card-description">Per defecte</p>
+          </div>
+        </div>
+      </div>
+      <div class="enunciat-reto-wrap" id="sistemaoperatiu">
+        <h3 class="enunciat-reto-titulo">SISTEMA OPERATIU</h3>
+        <div class="enunciat-reto6-70">
+          <p class="enunciat-reto-p"><b class="b-verde">Windows Server 2016</b>, llançat per Microsoft, té diverses avantatges que el fan atractiu per a diferents entorns empresarials. Aquí expliquem algunes de les avantatges clau:</p>
+          <ul>
+            <li class="enunciat-lista">Millores en seguretat</li>
+              <li class="enunciat-lista2">Windows Server 2016 inclou millores significatives en seguretat, com les funcions avançades de protecció contra amenaces i el sistema Credential Guard per protegir les credencials d'usuari.</li>
+            <li class="enunciat-lista">Administració centralitzada</li>
+              <li class="enunciat-lista2">Les eines de gestió, com el "Server Manager" i PowerShell, faciliten la administració centralitzada de múltiples servidors, simplificant les tasques administratives.</li>
+            <li class="enunciat-lista">Millora en el rendiment de la xarxa</li>
+              <li class="enunciat-lista2">Inclou funcionalitats com la segmentació de la xarxa i la millora del rendiment de la xarxa, la qual cosa és crucial per als entorns empresarials amb grans demandes de xarxa.</li>
+          </ul>
+         <p class="enunciat-reto-p">Per mantenir el nostre sistema operatiu Windows actualitzat ens fixarem a l'apartat Windows Update que no hi hagi actualitzacions pendents.</p>
+        </div> 
+        <div class="div-planol-pr">
+          <div class="enunciat-reto-centro">
+            <img src="images/windows-icono.png" alt="Image de Windows" class="I-dhcp">
+         </div>
+        </div>
+        <div class="enunciat-reto-70">
+            <p class="enunciat-reto-p"><b class="b-verde">Ubuntu Server 22.04 LTS</b>, és un sistema operatiu en xarxa de codi obert. A continuació us explico alguns beneficis:</p>
+          <ul>
+            <li class="enunciat-lista">Estabilitat i Suport a Llarg Termini</li>
+              <li class="enunciat-lista2">Ofereix suport a llarg termini amb actualitzacions de seguretat, garantint estabilitat.</li>
+            <li class="enunciat-lista">Facilitat d'Ús</li>
+              <li class="enunciat-lista2">Interfície amigable i instal·lació senzilla, amb una àmplia comunitat i documentació.</li>
+            <li class="enunciat-lista">Gestió de Paquets</li>
+              <li class="enunciat-lista2">Utilitza APT per a una fàcil instal·lació i gestió del programari amb repositoris extensos.</li>
+            <li class="enunciat-lista">Desenvolupament de Programari</li>
+              <li class="enunciat-lista2">Suport per a diversos llenguatges de programació i eines de desenvolupament.</li>
+          </ul>
+        </div>
+        <div class="div-planol-pr">
+          <div class="enunciat-reto-centro">
+            <img src="images/ubuntu-icono.png" alt="Image d'Ubuntu" class="I-dhcp">
+         </div>
+        </div>
+        <div class="enunciat-reto">
+          <p class="enunciat-reto-p">Per mantenir el nostre servidor actualitzat farem ús de les següents comandes:</p>
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p1">sudo apt update</p>
+            <button class="terminal-button" onclick="myFunction('p1')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p2">sudo apt upgrade</p>
+            <button class="terminal-button" onclick="myFunction('p2')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        
+       </div>
+        <div class="enunciat-reto-100" id="discdur">
+          <h3 class="enunciat-reto-titulo">DISC DUR I PARTICIONS</h3>
+          <p class="enunciat-reto-p">Disc dur 1: Tindrem dues particions, una per el sistema operatiu Windows Server 2016 i altre pel sistema operatiu Ubuntu Server 22.04 LTS.</p>
+          <div class="enunciat-reto6-discos">
+            <div class="enunciat-reto6-centro">
+              <h3 class="enunciat-reto6-h3">DISC DUR 1</h3>
+              <div class="div-particions">
+                <div class="div-particion-100">
+                <div class="div-particion-all div-purple-light-5">
+                  <p>Partició 1 (Windows 10)</p>
+                </div>
+                <div class="div-oculto-particion">250GB</div>
+                </div>
+              </div>
+            </div>
+            <div class="enunciat-reto6-centro">
+              <h3 class="enunciat-reto6-h3">DISC DUR 2</h3>
+              <div class="div-particions">
+
+                <div class="div-particion-25">
+                <div class="div-particion-all div-purple-light-1">
+                  <p>Partició 1 (Semana 1)</p>
+                </div>
+                <div class="div-oculto-particion">250GB</div>
+                </div>
+
+                <div class="div-particion-25">
+                <div class="div-particion-all div-purple-light-3">
+                  <p>Partició 2 (Semana 2)</p>
+                </div>
+                <div class="div-oculto-particion">250GB</div>
+                </div>
+
+                <div class="div-particion-25">
+                  <div class="div-particion-all div-purple-light-3">
+                    <p>Partició 3 (Semana 3)</p>
+                  </div>
+                  <div class="div-oculto-particion">250GB</div>
+                </div>
+
+                <div class="div-particion-25">
+                  <div class="div-particion-all div-purple-light-2">
+                    <p>Partició 4 (Semana 4)</p>
+                  </div>
+                  <div class="div-oculto-particion">250GB</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="enunciat-reto-100" id="copiesseguretat">
+          <h3 class="enunciat-reto-titulo">CÒPIES DE SEGURETAT</h3>
+          <p class="enunciat-reto-p">Les copies de seguretat, també conegudes com a "backups", són beneficioses per diverses raons importants:</p>
+          <ul>
+            <li class="enunciat-lista">Prevenció de la pèrdua de dades</li>
+              <li class="enunciat-lista2">Protegeixen contra errors, fallades del sistema i altres incidents, permetent la restauració de les dades.</li>
+            <li class="enunciat-lista">Protecció contra atacs de malware</li>
+              <li class="enunciat-lista2">En cas d'atacs, les copies de seguretat permeten recuperar les dades sense pagar rescat.</li>
+            <li class="enunciat-lista">Recuperació ràpida</li>
+              <li class="enunciat-lista2">Faciliten la restauració contra errors eficient en situacions d'emergència, mantenint la continuitat del negoci.</li>
+            <li class="enunciat-lista">Protecció contra erros humans</li>
+              <li class="enunciat-lista2">Redueixen els riscos associats amb errors accidentals, permetent la restauració de dades amb facilitat.</li>
+            <li class="enunciat-lista">Actualitzacions segures</li>
+              <li class="enunciat-lista2">Possibiliten proves amb noves actualitzacions o canvis sense posar en perill les dades originals.</li>
+            <li class="enunciat-lista">Cumpliment normatiu</li>
+              <li class="enunciat-lista2">Contribueixen al compliment de requisits legals i normatives relacionats amb la preservació i protecció de dades.</li>
+          </ul>
+        </div>
+        <div class="enunciat-reto-100">
+          <p class="enunciat-reto-p">Farem una còpia completa del nostre servidor cada setmana, gràcies a VirtualBox, que és on estem preparant els nostres sistemes operatius podrem exportar un arxiu <b class="b-verde">.ova</b> quan es necessiti. 
+            <br>Aquests arxius setmanals els pujarem a la carpeta Drive compartida amb tots els membres del grup. Aquesta carpeta es diu <b class="b-verde">Copia de seguridad</b>. 
+            Dins es divideix en dues subcarpetes anomenades <b class="b-verde">Windows Server</b> i <b class="b-verde">Ubuntu Server</b>.</p>
+            <br>
+        </div>
+        <div class="enunciat-reto-centro">
+          <p class="enunciat-reto-p">El format del nom de l'arxiu serà:<b class="b-verde"> [Windows/Ubuntu]_Grup1_[Data]</b></p>
+        </div>
+        <div class="enunciat-reto-centro">
+
+          <img src="images/esquema-seguridad.png" alt="Imatge d'un home amb un portàtil (Generada per IA)" class="I-esquema-seguridad">
+        </div>
+    </section>
+
+        <!--           Footer           -->
+
+        <footer>
+          <p>Copyright © 2024 - SMIX2A | Ivory, Chenxiao, Sergio, Lucas<br>Tots els drets reservats.</p>
+          <ul class="footer-listas">
+            <li class="footer-lista"><a href="https://www.youtube.com/user/LabdooDACH" target="_blank"><img src="images/youtube.png" alt="Youtube" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.facebook.com/Labdoo/" target="_blank"><img src="images/facebook.png" alt="Facebook" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.linkedin.com/company/labdoo.org/about/" target="_blank"><img src="images/linkedin.png" alt="Linkedin" class="icono-footer"></a></li>
+          </ul>
+        </footer>
+      </body>
+    </html>

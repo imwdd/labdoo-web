@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/boladelmundo.png">
+    <title>Elecció de la infraestructura - Projecte Labdoo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    
+    <!--          Header          -->
+
+<header class="header">
+    <div class="container">
+    <div class="divlogo">
+        <a href="index.html"><img src="images/logo-labdoo.png" alt="Logo Labdoo" class="logo_labdoo"></a>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li class="nav-link"><a href="index.html"><img src="images/homepage.png" class="icono-navbar"></a></li>
+            <li class="nav-link"><a href="formulario.html"><img src="images/formulario.png" class="icono-navbar"></a></li>      
+            <li class="nav-link"><a href="equipo.html"><img src="images/equipo.png" class="icono-navbar"></a></li> 
+            <li class="nav-link-d"><img src="images/menu.png" class="icono-navbar">
+                <div class="dropdown-content">
+                    <a href="reto1.html" class="active-reto">Elecció de la infraestructura</a>
+                    <a href="reto2.html" class="no-active-reto">Disseny i implementació de la infraestructura física i lògica</a>
+                    <a href="reto3.html" class="no-active-reto">Instal·lació dels servidors</a>
+                    <a href="reto4.html" class="no-active-reto">Creació d'usuaris i gestió de permisos i polítiques i directives</a>
+                    <a href="reto6.html" class="no-active-reto">Manteniment del nostre servidor</a>
+                    <a href="reto7.html" class="no-active-reto">Documentació web del projecte</a>
+                    <a href="reto8.html" class="no-active-reto">Protecció de la nostra xarxa</a>
+                    <a href="reto9.html" class="no-active-reto">Protecció de les nostres dades</a>
+                    <a href="reto10.html" class="no-active-reto">Implementació de servidors Linux i Windows</a>
+                    <a href="reto5.html" class="no-active-reto">Sanejament de portàtils Labdoo</a>
+                  </div>
+            </li>            
+        </ul>
+    </nav>
+    </div>
+
+</header>
+
+<div class="flecha-index">
+    <a href="#index">
+        <img src="images/flecha.png" class="flecha-index">
+    </a>
+</div>
+
+<!--                SECTION                 -->
+<section class="section-retos-enunciat">
+    <header class="headerfase">
+        <h2>ELECCIÓ DE LA INFRAESTRUCTURA</h2>
+    </header>
+    <div class="enunciat-reto">
+        <h3 class="enunciat-reto-titulo">Els objectius d'aquest repte són:</h3>
+    </div>
+    <div class="enunciat-reto-media">
+        <p class="enunciat-reto-p">
+        En aquest primera fase haurem d'analitzar els tipus de topologies (bus, anell…) que podem escollir per implementar la xarxa i decidir quina és la més adient, justificant en cada cas perquè triem una i no l'altra amb els seus pros i contres.<br>
+        Un cop decidida la infraestructura justificar com la implementarem en la solució que ens proposen. Indicar on posarem els diferents elements dins del plànol proporcionat.<br>
+        Tota instal·lació ha de seguir una sèrie de normatives. Indiqueu quines normatives d'instal·lació ha de complir la infraestructura que heu plantejat.<br>
+        L'escola tindrà sortida a internet via fibra òptica.
+        (OPCIONAL) Preveure futures ampliacions de la infraestructura (posible connexió amb una segona planta d'edifici)
+        </p>
+    </div>
+    <div class="foto-media-div">
+        <img src="images/topologia-all.png" alt="Image de topologia" class="I-topologia">
+    </div>
+    
+
+    <div class="enunciat-reto">
+        <p class="enunciat-reto-titulo">Les limitacions són:</p>  
+        <p class="enunciat-reto-p">
+        - La sala de servidors ha d'anar on vosaltres dieu al plànol. S'ha de justificar per qué.<br> 
+        - S'ha d'intentar minimitzar els metres de cablejat per ajustar el pressupost el màxim possible.<br>
+        </p>
+    </div>
+
+    <div class="div-index" id="index">
+        <header class="headerfase">
+            <h2>CONTINGUT</h2>
+        </header>
+        <ul class="ul-index">
+            <li class="li-index"><a href="#topologia">Topologia</a></li>
+            <li class="li-index"><a href="#normativa">Normativa</a></li>
+            <li class="li-index"><a href="#proposta">Proposta</a></li>
+            <li class="li-index"><a href="#posicio">Posició</a></li>
+            <li class="li-index"><a href="#futuro-a">Previsió</a></li>
+        </ul>
+    </div>
+
+    <div class="div-topologia" id="topologia">
+        <h3 class="enunciat-reto-titulo">TOPOLOGIA</h3>
+        <div class="enunciat-reto-70">
+            <p class="enunciat-reto-p">Cada aula tindrà un switch que connecta directament amb el servidor central, cada switch connectarà amb els dispositius necessaris de cada aula, i també amb un access point, serà de topologia arbre. El Switch central estarà connectat amb el Server i amb un router que estara connectat a la fibra òptica.
+                Aquest tipus de cablejat ens permet aïllar possibles problemes a la xarxa entre d’altres avantatges, també tenim la possibilitat d’afegir futures ampliacions.
+            </p>
+        </div>
+        <div class="foto-30-div">
+            <img src="images/topologia-mixto.png" alt="topologia-mixto" class="I-topologia-mixto">
+        </div>
+        <div class="foto-100-div">
+            <img src="images/esquema-reto1.png" alt="esquema" class="I-topologia">
+        </div>
+    </div>
+
+    <div class="div-normativa" id="normativa">
+        <div class="enunciat-reto">
+            <h3 class="enunciat-reto-titulo">NORMATIVA</h3>
+            <ul class="ul-normativa">
+                <li>
+                <p class="enunciat-reto-p">
+                    Tal i com diu la norma ANSI/EIA/TIA-568A utilitzarem l’estàndard demanat pel cablejat de la xarxa, utilitzant connectors RJ45 amb la norma EIA/TIA-568A.
+                    <a href="https://elcapored.jimdofree.com/normas-568a-568b/" target="_blank" class="link-reto">(Norma ANSI/EIA/TIA 568-A)</a>
+                </p>
+                </li>
+                <li>
+                <p class="enunciat-reto-p">
+                    Com he esmentat abans, utilitzarem un estàndard de clase A, segons la normativa Norma ISO-CEI 11801, els cables no poden superar els 100 metres. 
+                    <a href="https://es.wikipedia.org/wiki/ISO/IEC_11801" target="_blank" class="link-reto">(Norma ISO-CEI 11801 ISO-CEI/JTC1/SC25/WG3)</a>
+                </p>
+                </li>
+                <li>
+                <p class="enunciat-reto-p">
+                    La posició del servidor serà a una aula climatitzada que es mantindrà tot el dia a la temperatura demanada.  
+                    <a href="https://drive.google.com/file/d/1oa0_De-sTVD6_G1iBatSQf1I6owRlX6w/view" target="_blank" class="link-reto">(Normativa de la xarxa de Labdoo (1).pdf)</a>
+                </p>
+                </li>
+                <li>
+                <p class="enunciat-reto-p">
+                    L’aula tindrà accés restringit a les persones responsables del servidor, d’aquesta manera brindarem una bona seguretat al servidor i a la informació i serveis que contingui.
+                </p>
+                </li>
+                <li>
+                 <p class="enunciat-reto-p">
+                    L’aula comptarà amb una canalització i distribució, amb caixes de connexió, amb un cablejat estructurat, amb un sistema d’antenes, amb un equipament i armaris, amb una xarxa de telecomunicacions, amb una qualitat de servei, amb accessibilitat universal seguint les condicions que estableix la normativa ICT a Espanya.   
+                    <a href="https://www.boe.es/buscar/pdf/2011/BOE-A-2011-5834-consolidado.pdf" target="_blank" class="link-reto">(Normativa BOE)</a>
+                </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="div-proposta" id="proposta">
+        <h3 class="enunciat-reto-titulo">PLÀNOL</h3>
+        <div class="div-planol">
+        <img src="images/planol.png" alt="Plànol" class="planol-reto1">
+        </div>
+        <h3 class="enunciat-reto-titulo">Proposta 1 (posició del servidor)</h3>
+        <p class="enunciat-reto-p">Pressupost reforma sala de servidors(Mà d'obra inclosa a cada preu)</p>
+        <table class="table-proposta">
+            <tr>
+                <th colspan="5">PRESUPUESTOS</th>
+            </tr>
+            <tr class="tr-bold">
+                <td>Descripció</td>
+                <td>Unitat</td>
+                <td>Preu per unitat</td>
+                <td>Quantitat</td>
+                <td>Preu parcial</td>
+            </tr>
+            <tr>
+                <td>Construir parets</td>
+                <td>m²</td>
+                <td>32,50€</td>
+                <td>14,13</td>
+                <td>459,23€</td>
+            </tr>
+            <tr>
+                <td>Aire acondicionado</td>
+                <td></td>
+                <td>499€</td>
+                <td>1</td>
+                <td>499€</td>
+            </tr>
+            <tr>
+                <td>Instalación aire</td>
+                <td></td>
+                <td>320€</td>
+                <td>1</td>
+                <td>320€</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Preu total:</td>
+                <td>1.278,23€</td>
+            </tr>
+        </table>
+        <div class="div-planol-pr">
+            <img src="images/planol-pr1.png" alt="planol proposta1" class="I-planol-pr">
+        </div>
+        <h3 class="enunciat-reto-titulo">Proposta 2 (posició del servidor)</h3>
+        <p class="enunciat-reto-p">Pressupost reforma sala de servidors(Mà d'obra inclosa a cada preu)</p>
+        <table class="table-proposta">
+            <tr>
+                <th colspan="5">PRESUPUESTOS</th>
+            </tr>
+            <tr class="tr-bold">
+                <td>Descripció</td>
+                <td>Unitat</td>
+                <td>Preu per unitat</td>
+                <td>Quantitat</td>
+                <td>Preu parcial</td>
+            </tr>
+            <tr>
+                <td>Renovació</td>
+                <td>m²</td>
+                <td>200,00€</td>
+                <td>5</td>
+                <td>1.000€</td>
+            </tr>
+            <tr>
+                <td>Ventana</td>
+                <td>cm²</td>
+                <td>0,13€</td>
+                <td>780</td>
+                <td>100€</td>
+            </tr>
+            <tr>
+                <td>Aire acondicionado</td>
+                <td></td>
+                <td>499€</td>
+                <td>1</td>
+                <td>499€</td>
+            </tr>
+            <tr>
+                <td>Instalación aire</td>
+                <td></td>
+                <td>320€</td>
+                <td>1</td>
+                <td>320€</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Preu total</td>
+                <td>1.919,00€</td>
+            </tr>
+        </table>
+        <div class="div-planol-pr">
+            <img src="images/planol-pr2.png" alt="planol proposta1" class="I-planol-pr">
+        </div>
+    </div>
+
+    <div class="div-posicio" id="posicio">
+        <h3 class="enunciat-reto-titulo">Posició del servidor</h3>
+        <p class="enunciat-reto-p">Hem escollit la proposta 1 ja que és més econòmica i de cara a l'organització seria menys treball. <br>
+            A la proposta 1, construirem dues parets a la línia groga de la imatge per aïllar una habitació separada per al servidor i instal·lar un aire condicionat a l'habitació per mantenir una temperatura adequada. Els cables estan disposats en forma d'arbre connectant des del nostre servidor a cada aula.
+        </p>
+        <div class="div-planol">
+        <img src="images/posicion-servidor.png" alt="Posició del servidor" class="planol-reto1">
+        </div>
+    </div>
+
+    <div class="div-futuro-a" id="futuro-a">
+        <h3 class="enunciat-reto-titulo">Previsió futures ampliacions</h3>
+        <p class="enunciat-reto-p">
+            Futures ampliacions possibles, de cara a la distribució vertical serà possible connectar un altre switch per fer una ampliació i de cara a la distribució horitzontal serà possible connectar nous dispositius a la xarxa en cas de ser necessari.
+        </p>
+        <div class="div-media-futuro">
+            <img src="images/Distribución-horizontal.png" alt="Distribución-horizontal">
+            <p class="enunciat-reto-p-a">Distribució horizontal</p>
+        </div>
+        <div class="div-media-futuro">
+            <img src="images/Distribución-vertical.png" alt="Distribución-horizontal">
+            <p class="enunciat-reto-p-a">Distribució vertical</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!--           Footer           -->
+
+<footer>
+    <p>Copyright © 2024 - SMIX2A | Ivory, Chenxiao, Sergio, Lucas<br>Tots els drets reservats.</p>
+    <ul class="footer-listas">
+      <li class="footer-lista"><a href="https://www.youtube.com/user/LabdooDACH" target="_blank"><img src="images/youtube.png" alt="Youtube" class="icono-footer"></a></li>
+      <li class="footer-lista"><a href="https://www.facebook.com/Labdoo/" target="_blank"><img src="images/facebook.png" alt="Facebook" class="icono-footer"></a></li>
+      <li class="footer-lista"><a href="https://www.linkedin.com/company/labdoo.org/about/" target="_blank"><img src="images/linkedin.png" alt="Linkedin" class="icono-footer"></a></li>
+    </ul>
+  </footer>
+</body>
+</html>

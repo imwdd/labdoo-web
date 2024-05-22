@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/boladelmundo.png">
+    <title>Instal·lació dels servidors - Projecte Labdoo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    
+    <!--          Header          -->
+    <header class="header">
+      <div class="container">
+      <div class="divlogo">
+          <a href="index.html"><img src="images/logo-labdoo.png" alt="Logo Labdoo" class="logo_labdoo"></a>
+      </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link"><a href="index.html"><img src="images/homepage.png" class="icono-navbar"></a></li>
+                <li class="nav-link"><a href="formulario.html"><img src="images/formulario.png" class="icono-navbar"></a></li>      
+                <li class="nav-link"><a href="equipo.html"><img src="images/equipo.png" class="icono-navbar"></a></li> 
+                <li class="nav-link-d"><img src="images/menu.png" class="icono-navbar">
+                    <div class="dropdown-content">
+                      <a href="reto1.html" class="no-active-reto">Elecció de la infraestructura</a>
+                      <a href="reto2.html" class="no-active-reto">Disseny i implementació de la infraestructura física i lògica</a>
+                      <a href="reto3.html" class="active-reto">Instal·lació dels servidors</a>
+                      <a href="reto4.html" class="no-active-reto">Creació d'usuaris i gestió de permisos i polítiques i directives</a>
+                      <a href="reto6.html" class="no-active-reto">Manteniment del nostre servidor</a>
+                      <a href="reto7.html" class="no-active-reto">Documentació web del projecte</a>
+                      <a href="reto8.html" class="no-active-reto">Protecció de la nostra xarxa</a>
+                      <a href="reto9.html" class="no-active-reto">Protecció de les nostres dades</a>
+                      <a href="reto10.html" class="no-active-reto">Implementació de servidors Linux i Windows</a>
+                      <a href="reto5.html" class="no-active-reto">Sanejament de portàtils Labdoo</a>
+                      </div>
+                </li>            
+            </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="flecha-index">
+      <a href="#index">
+          <img src="images/flecha.png" class="flecha-index">
+      </a>
+    </div>
+
+    <section class="section-retos-enunciat">
+      <header class="headerfase">
+          <h2>INSTAL·LACIÓ DELS SERVIDORS I CLIENTS</h2>
+      </header>
+      <div class="enunciat-reto">
+        <p class="enunciat-reto-p">Respecte a la implementació real del projecte, la part que farem en sistema operatiu real (virtualbox) serà la part de servidors i un client Windows:</p>
+        <ul>
+          <li class="enunciat-lista">Hem de definir i justificar quines característiques tindrà el servidor i justificar quin sistema operatiu tindrà.</li>
+          <li class="enunciat-lista">Hem de definir i justificar quines característiques haurien de tenir els clients i justificar quin sistema operatiu tindrà.</li>
+          <li class="enunciat-lista">Haurem de configurar un domini per aquest servidor.</li>
+          <li class="enunciat-lista">Haurem de fer un document amb el procés d’instal·lació del servidor i del client</li>
+        </ul>
+        <p class="enunciat-reto-p">Llista de limitacions:</p>
+        <ul>
+          <li class="enunciat-lista">S’ha de respectar les característiques d’instal.lació mínimes que recomanin els diferents servidors.</li>
+          <li class="enunciat-lista">El nom de la màquina es dirà SERVER-NºGRUP (per exemple SERVER-1)</li>
+          <li class="enunciat-lista2">Si instal·leu més d’un server anomeneu-los SERVER-1-1, SERVER-1-2 etc..</li>
+          <li class="enunciat-lista">El nom del client serà CLIENT-NºGRUP (per exemple CLIENT-1)</li>
+        </ul>
+      </div>
+      <div class="foto-media-div-column">
+        <img src="images/windows-logo.png" alt="Image del logo de Windows Server" class="I-logo-windows">
+        <img src="images/ubuntu-logo.png" alt="Image del logo de Ubuntu Server" class="I-logo-ubuntu">
+      </div>
+    
+    <div class="div-index" id="index">
+      <header class="headerfase">
+          <h2>CONTINGUT</h2>
+      </header>
+      <ul class="ul-index">
+          <li class="li-index"><a href="#comparativa">Comparativa</a></li>
+          <li class="li-index"><a href="#windowsserver">Windows Server</a></li>
+          <li class="li-index"><a href="#ubuntuserver">Ubuntu Server</a></li>
+          <li class="li-index"><a href="#windows10">Windows 10</a></li>
+          <li class="li-index"><a href="#lubuntu">Lubuntu</a></li>
+      </ul>
+    </div>
+    <div class="enunciat-reto" id="comparativa">
+      <h3 class="enunciat-reto-titulo">COMPARATIVA</h3>
+      <p class="enunciat-reto-p">Entenent les necessitats que té la vostra empresa us oferim tres sistemes operatius en xarxa.</p>
+    </div>
+    <div class="div-comparativa">
+    <div class="enunciat-reto-70">
+      <p class="enunciat-reto-p">
+        El primer és <b class="b-verde">Windows Server 2016</b>, destacat per la fàcil configuració gràcies a la seva interfície gràfica, és compatible amb la majoria de programes que s'utilitzen actualment. 
+        El seu desavantatge són els preus que pot arribar a tenir, és un sistema operatiu en xarxa privat, per la qual cosa has de comprar una llicència.
+      </p>
+    </div>
+    <div class="foto-30-div">
+      <img src="images/windows-logo.png" alt="Logo de Windows Server" class="I-logo-windows-reto3">
+    </div>
+    </div>
+    <div class="div-comparativa">
+      <div class="foto-30-div">
+        <img src="images/ubuntu-logo.png" alt="Logo de Ubuntu Server" class="I-ubuntu">
+      </div>
+      <div class="enunciat-reto-70">
+        <p class="enunciat-reto-p">
+          El segon és <b class="b-verde">Ubuntu Server 22.04 LTS</b>, es destaca per ser un sistema operatiu en xarxa de codi obert, cosa que significa que no cal comprar una llicència i de cara a la personalització, tens més opcions per adaptar el sistema a la teva manera. 
+          La seguretat és elevada a diferència de Windows Server i sol tenir més rendiment que Windows Server.
+        </p>
+      </div>
+    </div>
+    <div class="div-comparativa">
+      <div class="enunciat-reto-70">
+        <p class="enunciat-reto-p">
+          El tercer és <b class="b-verde">UNIX</b> es destaca per ser un sistema operatiu en xarxa que permet diversos usuaris utilitzar-lo alhora. 
+          És de codi obert i sol tenir una alta estabilitat i seguretat.
+        </p>
+      </div>
+      <div class="foto-30-div">
+        <img src="images/unix-logo.png" alt="Logo de Unix Server" class="I-logo-windows-reto3">
+      </div>
+    </div>
+
+    <div class="enunciat-reto" id="windowsserver">
+      <h3 class="enunciat-reto-titulo">WINDOWS SERVER</h3>
+      <p class="enunciat-reto-p">Pel projecte utilitzarem el sistema operatiu Windows Server 2016 degut a 
+        l’equilibri entre la facilitat que ofereix la interfície gràfica i la seguretat que ens proporciona.</p>
+    </div>
+    <div class="div-pressupost" id="pressupost">
+              <div class="enunciat-reto-centro">
+                <table class="table-pressupost">
+                  <tr>
+                    <th colspan="4">Requisits mínims</th>
+                  </tr>
+                  <tr class="tr-bold">
+                    <td>Procesador</td>
+                    <td>Memoria RAM</td>
+                    <td>Emmagatzament</td>
+                    <td>Adaptador de xarxa</td>
+                  </tr>
+                  <tr>
+                    <td>Processador de 64 bits a 1,4 GHz (Compatible amb el conjunt d´instruccions x64)</td>
+                    <td>512 MB (2 GB per a l'opció d'instal·lació Servidor amb Experiència d'escriptori)</td>
+                    <td>32GB</td>
+                    <td>Un adaptador Ethernet amb un rendiment d'almenys 1 gigabit per segon</td>
+                  </tr>
+                </table>
+              </div>
+    </div>
+    <p class="enunciat-reto-p">A continuació podràs veure un <a href="manual/manual-windows-server.pdf" target="_blank">manual</a> que t’explica com instal·lar un Windows Server i configurar un domini.</p>
+    <div class="enunciat-reto-centro">
+      <embed src="manual/manual-windows-server.pdf" class="embed-manual">
+    </div>
+
+    <div class="enunciat-reto" id="ubuntuserver">
+      <h3 class="enunciat-reto-titulo">UBUNTU SERVER</h3>
+      <p class="enunciat-reto-p">Ubuntu Server 22.04 LTS l'utilitzarem de backup per si el servidor principal, el Windows Server falla. 
+        De moment, no hi farem cap configuració. </p>
+    </div>
+    <div class="div-pressupost" id="pressupost">
+              <div class="enunciat-reto-centro">
+                <table class="table-pressupost">
+                  <tr>
+                    <th colspan="4">Requisits mínims</th>
+                  </tr>
+                  <tr class="tr-bold">
+                    <td>Procesador</td>
+                    <td>Memoria RAM</td>
+                    <td>Emmagatzament</td>
+                    <td>Port USB</td>
+                  </tr>
+                  <tr>
+                    <td>Processador de doble nucli a 2 Ghz o superior.</td>
+                    <td>Com a mínim 4 GB de ram.</td>
+                    <td>25 GB</td>
+                    <td>Puerto USB i una memória USB de al menys 4 GB de capacitat.</td>
+                  </tr>
+                </table>
+              </div>
+    </div>
+    <p class="enunciat-reto-p">A continuació podràs veure un <a href="manual/manual-ubuntu-server.pdf" target="_blank">manual</a> que t’explica com instal·lar un Ubuntu Server.</p>
+    <div class="enunciat-reto-centro">
+      <embed src="manual/manual-ubuntu-server.pdf" class="embed-manual">
+    </div>
+
+    <div class="enunciat-reto" id="windows10">
+      <h3 class="enunciat-reto-titulo">WINDOWS 10</h3>
+      <p class="enunciat-reto-p">
+        Utilitzem el client Windows 10 per a fer proves, és molt fàcil i intuïtiu així que podem fer proves de connexions i demés coses relacionades amb els servidors d’una manera rápida i eficaç.
+      </p>
+    </div>
+    <div class="div-pressupost" id="pressupost">
+              <div class="enunciat-reto-centro">
+                <table class="table-pressupost">
+                  <tr>
+                    <th colspan="4">Requisits mínims</th>
+                  </tr>
+                  <tr class="tr-bold">
+                    <td>Procesador</td>
+                    <td>Memoria RAM</td>
+                    <td>Emmagatzament</td>
+                    <td>Tarjeta gràfica</td>
+                  </tr>
+                  <tr>
+                    <td>Processador de 1GHz</td>
+                    <td>2GB de RAM si volem tenir-lo a 64 bits, com en aquest cas</td>
+                    <td>Entre 16 i 32GB</td>
+                    <td>Compatible amb DirectX 9</td>
+                  </tr>
+                </table>
+              </div>
+    </div>
+    <p class="enunciat-reto-p">A continuació podràs veure un <a href="manual/manual-windows.pdf" target="_blank">manual</a> que t’explica com instal·lar un Windows 10 Pro.</p>
+    <div class="enunciat-reto-centro">
+      <embed src="manual/manual-windows.pdf" class="embed-manual">
+    </div>
+    
+    <div class="enunciat-reto" id="lubuntu">
+      <h3 class="enunciat-reto-titulo">LUBUNTU</h3>
+      <p class="enunciat-reto-p">Utilitzem lubuntu perquè es la distribució que utilitza Labdoo. 
+        A més a més és un SO de baix perfil i és molt accessible degut a que els requisits mínims son molt poc exigents.
+         </p>
+    </div>
+    <div class="div-pressupost" id="pressupost">
+              <div class="enunciat-reto-centro">
+                <table class="table-pressupost">
+                  <tr>
+                    <th colspan="4">Requisits mínims</th>
+                  </tr>
+                  <tr class="tr-bold">
+                    <td>Procesador</td>
+                    <td>Memoria RAM</td>
+                    <td>Emmagatzament</td>
+                    <td>Port USB</td>
+                  </tr>
+                  <tr>
+                    <td>Processador de 700MHz</td>
+                    <td>512 MB de RAM</td>
+                    <td>5GB per a la instal·lació, però perquè funcioni 10GB</td>
+                    <td>1 port USB</td>
+                  </tr>
+                </table>
+              </div>
+    </div>
+    <p class="enunciat-reto-p">A continuació podràs veure un <a href="manual/manual-windows.pdf" target="_blank">manual</a> que t’explica com instal·lar un Lubuntu.</p>
+    <div class="enunciat-reto-centro">
+      <embed src="manual/manual-lubuntu.pdf" class="embed-manual">
+    </div>
+
+        <!--           Footer           -->
+        <footer>
+          <p>Copyright © 2024 - SMIX2A | Ivory, Chenxiao, Sergio, Lucas<br>Tots els drets reservats.</p>
+          <ul class="footer-listas">
+            <li class="footer-lista"><a href="https://www.youtube.com/user/LabdooDACH" target="_blank"><img src="images/youtube.png" alt="Youtube" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.facebook.com/Labdoo/" target="_blank"><img src="images/facebook.png" alt="Facebook" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.linkedin.com/company/labdoo.org/about/" target="_blank"><img src="images/linkedin.png" alt="Linkedin" class="icono-footer"></a></li>
+          </ul>
+        </footer>
+      </body>
+    </html>

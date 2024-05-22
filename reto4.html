@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/boladelmundo.png">
+    <title>Creació d'usuaris, permisos, polítiques i directives - Projecte Labdoo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    
+    <!--          Header          -->
+
+    <header class="header">
+        <div class="container">
+        <div class="divlogo">
+            <a href="index.html"><img src="images/logo-labdoo.png" alt="Logo Labdoo" class="logo_labdoo"></a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link"><a href="index.html"><img src="images/homepage.png" class="icono-navbar"></a></li>
+                <li class="nav-link"><a href="formulario.html"><img src="images/formulario.png" class="icono-navbar"></a></li>      
+                <li class="nav-link"><a href="equipo.html"><img src="images/equipo.png" class="icono-navbar"></a></li> 
+                <li class="nav-link-d"><img src="images/menu.png" class="icono-navbar">
+                    <div class="dropdown-content">
+                      <a href="reto1.html" class="no-active-reto">Elecció de la infraestructura</a>
+                      <a href="reto2.html" class="no-active-reto">Disseny i implementació de la infraestructura física i lògica</a>
+                      <a href="reto3.html" class="no-active-reto">Instal·lació dels servidors</a>
+                      <a href="reto4.html" class="active-reto">Creació d'usuaris i gestió de permisos i polítiques i directives</a>
+                      <a href="reto6.html" class="no-active-reto">Manteniment del nostre servidor</a>
+                      <a href="reto7.html" class="no-active-reto">Documentació web del projecte</a>
+                      <a href="reto8.html" class="no-active-reto">Protecció de la nostra xarxa</a>
+                      <a href="reto9.html" class="no-active-reto">Protecció de les nostres dades</a>
+                      <a href="reto10.html" class="no-active-reto">Implementació de servidors Linux i Windows</a>
+                      <a href="reto5.html" class="no-active-reto">Sanejament de portàtils Labdoo</a>
+                      </div>
+                </li>            
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div class="flecha-index">
+      <a href="#index">
+          <img src="images/flecha.png" class="flecha-index">
+      </a>
+    </div>
+
+    <section class="section-retos-enunciat">
+      <header class="headerfase">
+          <h2>CREACIÓ D'USUARIS I GESTIÓ DE PERMISOS I POLÍTIQUES I DIRECTIVES</h2>
+      </header>
+      <div class="enunciat-reto-70">
+        <p class="enunciat-reto-titulo">L'encàrrec consisteix en:</p>
+          <ul>
+            <li class="enunciat-lista">Treballarem amb un usuari base anomenat labdoo.</li>
+            <li class="enunciat-lista">Definir una estructura de carpetes compartides:</li>
+            <li class="enunciat-lista2">una per l’usuari base i un altra genèrica on es guardarà informació comuna a tota la organització.</li>
+            <li class="enunciat-lista2">Aquestes carpetes li apareixen com a unitats virtuals tan bon punt iniciï sessió.</li>
+            <li class="enunciat-lista">Heu de decidir la llista de permisos que tindrà aquest usuari sobre la carpeta justificant el perquè.</li>
+            <li class="enunciat-lista">Definir qualsevol altre política o directiva que creieu interessant per la gestió de l’escola.</li>
+          </ul>
+      <p class="enunciat-reto-p">Llista de limitacions</p>
+      <ul>
+        <li class="enunciat-lista">Sempre ha d’haver un usuari administrador que tindrà el control total sobre tot.</li>
+        <li class="enunciat-lista">Per l’usuari genèric, hem de veure que decidim que tingui com a limitacions. 
+          (per exemple, que no pugui modificar l’escriptori, no poder instal·lar aplicacions i/o executar cmd, accès al registre…)</li>
+      </ul>
+      </div>
+      <div class="div-planol-pr">
+        <img src="images/grupo-usuario.png" alt="Image de Grups i usuaris" class="I-topologia">
+      </div>
+
+
+      <p class="enunciat-reto-p">En primer lloc el nostre encàrrec va ser aquest però nosaltres com a tècniques informàtiques, 
+        gràcies als nostres coneixements vam decidir proposar una estructura molt més robusta i complexa. 
+        Això degut a la manca de seguretat, control i centralització a l'encàrrec del nostre client.
+      </p>
+
+      <div class="div-index" id="index">
+        <header class="headerfase">
+          <h2>CONTINGUT</h2>
+        </header>
+        <ul class="ul-index">
+          <li class="li-index"><a href="#organizativa">Organitzativa</a></li>
+          <li class="li-index"><a href="#grup">Grup</a></li>
+          <li class="li-index"><a href="#usuari">Usuari</a></li>
+          <li class="li-index"><a href="#carpetes">Carpetes</a></li>
+          <li class="li-index"><a href="#permisos">Permisos</a></li>
+          <li class="li-index"><a href="#gpo">GPO</a></li>
+        </ul>
+      </div>
+
+      <div class="enunciat-reto-wrap">
+        <h3 class="enunciat-reto-titulo">Esquema de proposta</h3>
+          <div class="enunciat-reto-60">
+            <p class="enunciat-reto-p">
+              En el nostre esquema proposat, <b class="b-verde">hem creat 3 unitats d'organització, distribuïdes en 9 grups i amb la participació de 11 usuaris</b>. L'objectiu d'aquesta estructura és assegurar una millor col·laboració i un flux d'informació eficient per donar suport a la implementació reeixida dels nostres projectes o objectius. Mitjançant aquesta organització, podem abordar les tasques i reptes en diferents nivells de manera més flexible, aprofitant al màxim el potencial de cada membre per impulsar col·lectivament l'èxit de l'organització.
+            </p>
+          </div>
+          <div class="foto-40-div">
+            <img src="images/esquema-ogu.png" alt="esquema de proposta" class="I-topologia">
+          </div>
+      </div>
+
+      <div class="enunciat-reto-100" id="organizativa">
+        <h3 class="enunciat-reto-titulo">Unidad organizativa</h3>
+        <p class="enunciat-reto-p">Tenim 3 unitats organitzatives les quals són Direccio, Professors i Alumnes.</p>
+        <div class="enunciat-reto-centro">
+          <ul class="reto4-uo-ul">
+            <li class="reto4-uo-li"><div class="reto4-ou-div">Direccio</div></li>
+            <li class="reto4-uo-li"><div class="reto4-ou-div">Professors</div></li>
+            <li class="reto4-uo-li"><div class="reto4-ou-div">Alumnos</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="enunciat-reto" id="grup">
+        <h3 class="enunciat-reto-titulo">Grups</h3>
+        <p class="enunciat-reto-p">Tenim un total de 9 grups els quals són Direccio, Tutor, Profe, Alumne, AULA21, AULA22, AULA23, AULA24, AULA25.</p>
+        <ul class="reto4-uo-ul">
+          <li class="reto4-uo-li"><div class="reto4-ou-div">Direccio</div></li>
+          <li class="reto4-uo-li"><div class="reto4-ou-div">Tutor</div></li>
+          <li class="reto4-uo-li"><div class="reto4-ou-div">Profe</div></li>
+          <li class="reto4-uo-li"><div class="reto4-ou-div">Alumne</div></li>
+          <li class="reto4-uo-li"><div class="reto4-ou-div">AULA21</div></li>
+          <li class="reto4-uo-li"><div class="reto4-ou-div">AULA22</div></li>
+          <li class="reto4-uo-li"><div class="reto4-ou-div">AULA23</div></li>
+          <li class="reto4-uo-li"><div class="reto4-ou-div">AULA24</div></li>
+          <li class="reto4-uo-li"><div class="reto4-ou-div">AULA25</div></li>
+        </ul>
+      </div>
+
+      <div class="enunciat-reto" id="usuari">
+        <h3 class="enunciat-reto-titulo">Usuaris</h3>
+        <p class="enunciat-reto-p">
+          Tenim un total d'11 usuaris amb els seus respectius noms d'inici de sessió, que són Maria Fernandez (mfernandez), Miguel Diaz (mdiaz), Pau Smith (psmith), Hector Brown (hbrown), Jon Wilson (jwilson), Alba Davies (adavies), Ivory Wright (iwright), Chenxiao Evans (cevans), Joel Garcia (jgarcia), Ruben Wood (rwood) i Alfonso Turner (aturner).</p>
+      </div>
+          <div class="enunciat-reto-centro">
+          <table class="table-pressupost">
+          <tr>
+            <th>Usuaris</th>
+            <th>Nom d'inici de sessió</th>
+            <th>Unitat Organitzativa</th>
+            <th>Grups</th>
+          </tr>
+          <tr>
+            <td>Maria Fernandez</td>
+            <td>mfernandez</td>
+            <td>Direccion</td>
+            <td>Direccio</td>
+          </tr>
+          <tr>
+            <td>Miguel Diaz</td>
+            <td>mdiaz</td>
+            <td>Professors</td>
+            <td>Profe</td>
+          </tr>
+          <tr>
+            <td>Paz Smith</td>
+            <td>psmith</td>
+            <td>Professors</td>
+            <td>Profe y Tutor</td>
+          </tr>
+          <tr>
+            <td>Hector Brown</td>
+            <td>hbrown</td>
+            <td>Professors</td>
+            <td>Profe</td>
+          </tr>
+          <tr>
+            <td>Jon Wilson</td>
+            <td>jwilson</td>
+            <td>Professors</td>
+            <td>Profe</td>
+          </tr>
+          <tr>
+            <td>Alba Davies</td>
+            <td>adavies</td>
+            <td>Professors</td>
+            <td>Profe y Tutor</td>
+          </tr>
+          <tr>
+            <td>Ivory Wright</td>
+            <td>iwright</td>
+            <td>Alumnos</td>
+            <td>Alumno y AULA21</td>
+          </tr>
+          <tr>
+            <td>Chenxiao Evans</td>
+            <td>cevans</td>
+            <td>Alumnos</td>
+            <td>Alumno y AULA22</td>
+          </tr>
+          <tr>
+            <td>Lucas Garcia</td>
+            <td>lgarcia</td>
+            <td>Alumnos</td>
+            <td>Alumno y AULA23</td>
+          </tr>
+          <tr>
+            <td>Sergio Wood</td>
+            <td>swood</td>
+            <td>Alumnos</td>
+            <td>Alumno y AULA24</td>
+          </tr>
+          <tr>
+            <td>Alfonso Turner</td>
+            <td>aturner</td>
+            <td>Alumnos</td>
+            <td>Alumno y AULA25</td>
+          </tr>
+        </table>
+        </div>
+
+
+      <div class="enunciat-reto" id="carpetes">
+        <h3 class="enunciat-reto-titulo">Carpetes</h3>
+        <p class="enunciat-reto-p">Tenim un total de 10 carpetes amb una estructura, la carpeta principal Labdoo, al seu interior es trobaran les carpetes de Direccio, Tutors, Professors i Alumnes, ia l'interior d'Alumnes de trobaran les carpetes d'AULA21, AULA2, AULA23, AULA24 i AULA25.</p>
+      </div>
+      <div class="enunciat-reto-centro">
+        <table class="table-estructura">
+          <tr>
+            <th colspan="3">Estructura carpetes</th>
+          </tr>
+          <tr>
+            <td rowspan="8">Labdoo</td>
+            <td colspan="2">Direccion</td>
+          </tr>
+          <tr>
+            <td colspan="2">Tutors</td>
+          </tr>
+          <tr>
+            <td colspan="2">Professors</td>
+          </tr>
+          <tr>
+            <td rowspan="5">Alumnes</td>
+            <td>AULA21</td>
+          </tr>
+          <tr>
+            <td>AULA22</td>
+          </tr>
+          <tr>
+            <td>AULA23</td>
+          </tr>
+          <tr>
+            <td>AULA24</td>
+          </tr>
+          <tr>
+            <td>AULA25</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="enunciat-reto" id="permisos">
+        <h3 class="enunciat-reto-titulo">Permisos</h3>
+      </div>
+      <ul class="reto4-uo-ul">
+        <li class="reto4-permiso-li"><div class="div-fucsia">All</div></li>
+        <li class="reto4-permiso-li"><div class="div-purple">Read + Write</div></li>
+        <li class="reto4-permiso-li"><div class="div-blue">Read</div></li>
+        <li class="reto4-permiso-li"><div class="div-red">No permission</div></li>
+      </ul>
+      <div class="enunciat-reto-wrap">
+        <div class="enunciat-reto-media-reto4-estructura">
+          <table class="table-estructura">
+            <tr>
+              <th colspan="3">Direccio</th>
+            </tr>
+           <tr>
+              <td rowspan="8" class="td-blue">Labdoo</td>
+              <td colspan="2" class="td-fucsia">Direccion</td>
+           </tr>
+            <tr>
+             <td colspan="2" class="td-purple">Tutors</td>
+           </tr>
+            <tr>
+              <td colspan="2" class="td-purple">Professors</td>
+            </tr>
+            <tr>
+             <td rowspan="5" class="td-blue">Alumnes</td>
+             <td class="td-blue">AULA21</td>
+            </tr>
+            <tr>
+             <td class="td-blue">AULA22</td>
+            </tr>
+            <tr>
+             <td class="td-blue">AULA23</td>
+           </tr>
+            <tr>
+              <td class="td-blue">AULA24</td>
+            </tr>
+            <tr>
+              <td class="td-blue">AULA25</td>
+            </tr>
+          </table>
+          <p class="enunciat-reto-p"> <b class="b-verde">El grup direccio</b>, té permís de només lectura a les carpetes de Labdoo, Alumnes i totes les AULAS, té permisos de lectura i escriptura a les carpetes de Professors i Tutors ia la carpeta de Direccion ho té tot permès.</p>
+        </div>
+
+        <div class="enunciat-reto-media-reto4-estructura">
+          <table class="table-estructura">
+            <tr>
+              <th colspan="3">Tutor</th>
+            </tr>
+           <tr>
+              <td rowspan="8" class="td-blue">Labdoo</td>
+              <td colspan="2" class="td-red">Direccion</td>
+           </tr>
+            <tr>
+             <td colspan="2" class="td-fucsia">Tutors</td>
+           </tr>
+            <tr>
+              <td colspan="2" class="td-fucsia">Professors</td>
+            </tr>
+            <tr>
+             <td rowspan="5" class="td-fucsia">Alumnes</td>
+             <td class="td-fucsia">AULA21</td>
+            </tr>
+            <tr>
+             <td class="td-fucsia">AULA22</td>
+            </tr>
+            <tr>
+             <td class="td-fucsia">AULA23</td>
+           </tr>
+            <tr>
+              <td class="td-fucsia">AULA24</td>
+            </tr>
+            <tr>
+              <td class="td-fucsia">AULA25</td>
+            </tr>
+          </table>
+          <p class="enunciat-reto-p"><b class="b-verde">El grup tutor</b>, té permís de només lectura a la carpeta de Labdoo, a les carpetes de Tutors, Professors, Alumnes i totes les AULES, té tot permès i no té permisos a la carpeta Direccio.</p>
+        </div>
+      </div>
+
+      <div class="enunciat-reto-wrap">
+        <div class="enunciat-reto-media-reto4-estructura">
+          <table class="table-estructura">
+            <tr>
+              <th colspan="3">Profe</th>
+            </tr>
+           <tr>
+              <td rowspan="8" class="td-blue">Labdoo</td>
+              <td colspan="2" class="td-red">Direccion</td>
+           </tr>
+            <tr>
+             <td colspan="2" class="td-red">Tutors</td>
+           </tr>
+            <tr>
+              <td colspan="2" class="td-fucsia">Professors</td>
+            </tr>
+            <tr>
+             <td rowspan="5" class="td-fucsia">Alumnes</td>
+             <td class="td-fucsia">AULA21</td>
+            </tr>
+            <tr>
+             <td class="td-fucsia">AULA22</td>
+            </tr>
+            <tr>
+             <td class="td-fucsia">AULA23</td>
+           </tr>
+            <tr>
+              <td class="td-fucsia">AULA24</td>
+            </tr>
+            <tr>
+              <td class="td-fucsia">AULA25</td>
+            </tr>
+          </table>
+          <p class="enunciat-reto-p"><b class="b-verde">El grup Profe</b>, té permís de només lectura a la carpeta de labdoo, no té permisos a les carpetes de Direcció i Tutors i té tot permès a les carpetes de Professors, Alumnes i totes les AULES.</p>
+        </div>
+        
+        <div class="enunciat-reto-media-reto4-estructura">
+          <table class="table-estructura">
+            <tr>
+              <th colspan="3">Alumno</th>
+            </tr>
+           <tr>
+              <td rowspan="8" class="td-blue">Labdoo</td>
+              <td colspan="2" class="td-red">Direccion</td>
+           </tr>
+            <tr>
+             <td colspan="2" class="td-red">Tutors</td>
+           </tr>
+            <tr>
+              <td colspan="2" class="td-red">Professors</td>
+            </tr>
+            <tr>
+             <td rowspan="5" class="td-blue">Alumnes</td>
+             <td class="td-red">AULA21</td>
+            </tr>
+            <tr>
+             <td class="td-red">AULA22</td>
+            </tr>
+            <tr>
+             <td class="td-red">AULA23</td>
+           </tr>
+            <tr>
+              <td class="td-red">AULA24</td>
+            </tr>
+            <tr>
+              <td class="td-red">AULA25</td>
+            </tr>
+          </table>
+          <p class="enunciat-reto-p"><b class="b-verde">El grup Alumne</b>, té permís de només lectura a les carpetes de Labdoo i Alumnes, i no tenen permisos les carpetes de Direccio, Tutors, Professors i totes les AULES.</p>
+        </div>
+      </div>
+
+      <div class="enunciat-reto" id="gpo">
+        <h3 class="enunciat-reto-titulo">GPO</h3>
+        <p class="enunciat-reto-p">
+          Bloquejarem l'accés al símbol del sistema i al tauler de control a totes les unitats organitzatives. Addicionalment, per a la unitat organitzativa Alumnes bloquejarem la possibilitat de canviar el fons de pantalla.
+        </p>
+      </div>
+      <div class="enunciat-reto-centro">
+      <table class="table-gpo">
+        <tr>
+          <td rowspan="2" class="tr-bold-centre">Tots</td>
+          <td>Prohibir l'accés a Configuració de PC i al Panell de control</td>
+        </tr>
+        <tr>
+          <td>Impedir l'accés al símbol del sistema</td>
+        </tr>
+      </table>
+     </div>
+     <div class="enunciat-reto-centro">
+      <table class="table-gpo">
+        <tr>
+          <td rowspan="2" class="tr-bold-centre">Alumnos</td>
+          <td>Evitar que canviï la imatge de les pantalles de bloqueig i inici de sessió</td>
+        </tr>
+        <tr>
+          <td>Evitar el canvi del fons del menú inici</td>
+        </tr>
+      </table>
+      </div>
+
+    </section>
+
+        <!--           Footer           -->
+
+        <footer>
+          <p>Copyright © 2024 - SMIX2A | Ivory, Chenxiao, Sergio, Lucas<br>Tots els drets reservats.</p>
+          <ul class="footer-listas">
+            <li class="footer-lista"><a href="https://www.youtube.com/user/LabdooDACH" target="_blank"><img src="images/youtube.png" alt="Youtube" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.facebook.com/Labdoo/" target="_blank"><img src="images/facebook.png" alt="Facebook" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.linkedin.com/company/labdoo.org/about/" target="_blank"><img src="images/linkedin.png" alt="Linkedin" class="icono-footer"></a></li>
+          </ul>
+        </footer>
+      </body>
+    </html>

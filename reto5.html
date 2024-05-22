@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/boladelmundo.png">
+    <title>Sanejament de portàtils - Projecte Labdoo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      function myFunction(id) {
+        let copyText = document.getElementById(id);
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.textContent);
+        // Alert the copied text
+        alert("Comanda copiada: " + copyText.textContent);
+      }
+      </script>
+  </head>
+  <body>
+    
+    <!--          Header          -->
+
+    <header class="header">
+        <div class="container">
+        <div class="divlogo">
+            <a href="index.html"><img src="images/logo-labdoo.png" alt="Logo Labdoo" class="logo_labdoo"></a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link"><a href="index.html"><img src="images/homepage.png" class="icono-navbar"></a></li>
+                <li class="nav-link"><a href="formulario.html"><img src="images/formulario.png" class="icono-navbar"></a></li>      
+                <li class="nav-link"><a href="equipo.html"><img src="images/equipo.png" class="icono-navbar"></a></li> 
+                <li class="nav-link-d"><img src="images/menu.png" class="icono-navbar">
+                    <div class="dropdown-content">
+                      <a href="reto1.html" class="no-active-reto">Elecció de la infraestructura</a>
+                      <a href="reto2.html" class="no-active-reto">Disseny i implementació de la infraestructura física i lògica</a>
+                      <a href="reto3.html" class="no-active-reto">Instal·lació dels servidors</a>
+                      <a href="reto4.html" class="no-active-reto">Creació d'usuaris i gestió de permisos i polítiques i directives</a>
+                      <a href="reto6.html" class="no-active-reto">Manteniment del nostre servidor</a>
+                      <a href="reto7.html" class="no-active-reto">Documentació web del projecte</a>
+                      <a href="reto8.html" class="no-active-reto">Protecció de la nostra xarxa</a>
+                      <a href="reto9.html" class="no-active-reto">Protecció de les nostres dades</a>
+                      <a href="reto10.html" class="no-active-reto">Implementació de servidors Linux i Windows</a>
+                      <a href="reto5.html" class="active-reto">Sanejament de portàtils Labdoo</a>
+                      </div>
+                </li>            
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div class="flecha-index">
+      <a href="#headerfase">
+          <img src="images/flecha.png" class="flecha-index">
+      </a>
+    </div>
+
+    <section class="section-retos-enunciat">
+      <header class="headerfase" id="headerfase">
+          <h2>SANEJAMENT DE PORTÀTILS LABDOO</h2>
+      </header>
+      <div class="enunciat-reto-70">
+        <h3 class="enunciat-reto-titulo">ETAPES DEL SANEJAMENT DE PORTÀTILS</h3>
+        <p class="enunciat-reto-p">El sanejament de portàtils a Labdoo es realitza seguint les següents etapes:</p>
+        <ul>
+          <li class="enunciat-lista">1. Etiquetat</li>
+            <li class="enunciat-lista2">Etiquetar el portàtil dins de la plataforma Labdoo: <b class="b-verde">Posar el portàtil a estat S1</b></li>
+          <li class="enunciat-lista">2. Neteja</li>
+            <li class="enunciat-lista2">Netejar i preparar físicament el portàtil: Neteja del teclat, pantalla, ventilador,... 
+              Fent servir brotxes, drap i/o aire comprimit</li>
+          <li class="enunciat-lista">3. Sanejament</li>
+            <li class="enunciat-lista2">Prepararem a nivel de software del portàtil: ho expliquem en detall<a href="#sanejament" class="enunciat-reto-p-a">a la secció següent</a>.</li>
+          <li class="enunciat-lista">4. Comprovació</li>
+            <li class="enunciat-lista2">Comprovar que tot funciona correctament al portàtil: 
+              farem comprovació a nivell de teclat, video, càmara, les aplicacions obren correctament i es pot treballar amb elles.</li>
+        </ul>
+      </div>
+      <div class="div-planol-pr">
+        <img src="images/foto-repte5-1.jpg" alt="Procès de sanejament" class="I-topologia">
+      </div>
+      <div class="enunciat-reto-70" id="sanejament">
+        <div class="enunciat-reto-100">
+          <h3 class="enunciat-reto-titulo">SANEJAMENT A NIVELL DE SOFTWARE</h3>
+          <p class="enunciat-reto-p">Existeixen 2 tipus de sanejament i "puesta a punto" a nivel de software del portàtil Labdoo:</p>
+          <ul>
+            <li class="enunciat-lista">A) El sanejament pas a pas:</li>
+              <li class="enunciat-lista2">- Bootegem un USB amb GParted i esborrem totes les particions.</li>
+                <li class="enunciat-lista3">1. Prepara un USB booteable con Labtix</li>
+                <li class="enunciat-lista3">2. Engega el portàtil des del USB i obre gparted.</li>
+                <li class="enunciat-lista3">3. Esborra totes les particions i aplica els canvis. </li>
+              <li class="enunciat-lista2">Si et queden dubtes aquí tens instruccions més precises de com fer-ho: <a href="https://platform.labdoo.org/content/creation-labtix-bootable-usb" class="enunciat-reto-p-a" target="_blank">https://platform.labdoo.org/content/creation-labtix-bootable-usb</a></li>
+              <li class="enunciat-lista2">- Fem la neteja segura de dades del disc dur fent servir la següent comanda per sobreescriure el disc 2 vegades:</li>
+          </ul>
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p3">sudo shred /dev/sda -f -v --iterations=2</p>
+            <button class="terminal-button" onclick="myFunction('p3')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+      </div>
+      <div class="div-planol-pr">
+        <img src="images/foto-repte5-3.jpg" alt="Procès de sanejament" class="I-topologia">
+      </div>
+        <div class="enunciat-reto-100">
+        <ul>
+            <li class="enunciat-lista2">- Instal·lem una distribució de Linux adient als hardware que tenim a la màquina: Lubuntu, Linux Mint, Puppy Linux...</li>
+          <li class="enunciat-lista">B) Sanejament fent servir Labtix: </li>
+        </ul>
+        <p class="enunciat-reto-p">Labtix és una distro de Linux creada per Labdoo, 
+          basada en la distro Antix que conté una serie de programes i eines útils per chequejar l'estat del portàtil i fer sanejament a nivell de software. Els pasos a seguir són:</p>
+        <ul>
+            <li class="enunciat-lista2">- Bootegem un USB amb Labtix</li>
+            <li class="enunciat-lista2">- Arrancar el portàtil des del USB</li>
+            <li class="enunciat-lista2">- Obre el programa StressCPU: comprova la temperatura</li>
+            <li class="enunciat-lista2">- Obre el programa Disk Check i fes el test ràpid</li>
+            <li class="enunciat-lista2">- Obre el programa zzzFM:</li>
+              <li class="enunciat-lista3"> Selecciona el disc extern on tinguis les imatges de Labdoo al quadre de la dreta.</li>
+              <li class="enunciat-lista3">Selecciona la carpeta on tens la imatge de clonezilla que vols clonar al disc dur intern. Clica botó dret de ratolí i selecciona "Labtix Install"</li>
+        </ul>  
+      </div>
+    </div>
+
+      <div class="div-index">
+        <header class="headerfase">
+          <h2>MÉS INFORMACIÓ</h2>
+        </header>
+        <ul class="ul-index">
+            <li class="li-index"><a href="https://platform.labdoo.org/es/content/how-start-labdoo-laptop" target="_blank">USUARIS I CONTRASENYES</a></li>
+            <li class="li-index"><a href="https://youtu.be/oCJ84kMxjg4?si=G3PSnFm1t-X_ESJr" target="_blank">VIDEO</a></li>
+            <li class="li-index"><a href="https://docs.google.com/document/d/1reGY73YEOV1CCHh3eCKdvkpoHsH9p4ZPdqdDscOzCBs/edit" target="_blank">EXTRA</a></li>
+        </ul>
+      </div>
+      <div class="enunciat-reto-centro">
+        <img src="images/foto-repte5-2.jpg" alt="Procès de sanejament" class="I-reto5">
+      </div>
+    </section>
+
+
+        <!--           Footer           -->
+
+        <footer>
+          <p>Copyright © 2024 - SMIX2A | Ivory, Chenxiao, Sergio, Lucas<br>Tots els drets reservats.</p>
+          <ul class="footer-listas">
+            <li class="footer-lista"><a href="https://www.youtube.com/user/LabdooDACH" target="_blank"><img src="images/youtube.png" alt="Youtube" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.facebook.com/Labdoo/" target="_blank"><img src="images/facebook.png" alt="Facebook" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.linkedin.com/company/labdoo.org/about/" target="_blank"><img src="images/linkedin.png" alt="Linkedin" class="icono-footer"></a></li>
+          </ul>
+        </footer>
+      </body>
+    </html>

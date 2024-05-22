@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/boladelmundo.png">
+    <title>Protecció de la nostra xarxa - Projecte Labdoo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    
+    <!--          Header          -->
+
+    <header class="header">
+      <div class="container">
+        <div class="divlogo">
+            <a href="index.html"><img src="images/logo-labdoo.png" alt="Logo Labdoo" class="logo_labdoo"></a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link"><a href="index.html"><img src="images/homepage.png" class="icono-navbar"></a></li>
+                <li class="nav-link"><a href="formulario.html"><img src="images/formulario.png" class="icono-navbar"></a></li>      
+                <li class="nav-link"><a href="equipo.html"><img src="images/equipo.png" class="icono-navbar"></a></li> 
+                <li class="nav-link-d"><img src="images/menu.png" class="icono-navbar">
+                    <div class="dropdown-content">
+                      <a href="reto1.html" class="no-active-reto">Elecció de la infraestructura</a>
+                      <a href="reto2.html" class="no-active-reto">Disseny i implementació de la infraestructura física i lògica</a>
+                      <a href="reto3.html" class="no-active-reto">Instal·lació dels servidors</a>
+                      <a href="reto4.html" class="no-active-reto">Creació d'usuaris i gestió de permisos i polítiques i directives</a>
+                      <a href="reto6.html" class="no-active-reto">Manteniment del nostre servidor</a>
+                      <a href="reto7.html" class="no-active-reto">Documentació web del projecte</a>
+                      <a href="reto8.html" class="active-reto">Protecció de la nostra xarxa</a>
+                      <a href="reto9.html" class="no-active-reto">Protecció de les nostres dades</a>
+                      <a href="reto10.html" class="no-active-reto">Implementació de servidors Linux i Windows</a>
+                      <a href="reto5.html" class="no-active-reto">Sanejament de portàtils Labdoo</a>
+                      </div>
+                </li>            
+            </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="flecha-index">
+      <a href="#index">
+          <img src="images/flecha.png" class="flecha-index">
+      </a>
+    </div>
+
+    <section class="section-retos-enunciat">
+      <header class="headerfase">
+          <h2>PROTECCIÓ DE LA NOSTRA XARXA</h2>
+      </header>
+      <div class="enunciat-reto-70">
+        <h3 class="enunciat-reto-titulo">El context</h3>
+        <p class="enunciat-reto-p">Acabem de rebre un nou servidor! Des de Labdoo ens han fet arribar un servidor perquè l'utilitzem com vulguem dins de l'escola. 
+          Nosaltres, com a membres de l'equip de suport tècnic del centre, sereu els responsables de posar-lo en marxa i configurar-lo.
+          Sembla una bona idea però... què serà el nostre servidor? 
+          Després de reunir-vos diversos membres de l'equip se'ns han ocorregut moltes idees però finalment hem decidit que, a causa de problemes de seguretat que s'han donat recentment a l'escola, la millor opció podria ser configurar un servidor de firewall o un servidor de proxy.
+          I per què no ambdues? Podríem crear un únic servidor firewall i proxy! Però... com podem fer-ho?</p>
+      </div>
+      <div class="div-planol-pr">
+        <img src="images/foto-reto8.jpg" alt="Imatge d'un home amb un portàtil (Generada per IA)" class="I-logo-miro">
+      </div>
+      <div class="enunciat-reto-100">
+        <h3 class="enunciat-reto-titulo">L'encàrrec</h3>
+        <div class="enunciat-reto-wrap">
+          <div class="div-planol-pr">
+            <img src="images/foto2-reto8.jpg" alt="Imatge d'un home amb un portàtil (Generada per IA)" class="I-topologia">
+          </div>
+          <div class="enunciat-reto-70">
+            <p class="enunciat-reto-p">El vostre cap de projecte per a aquest encàrrec pensa que no teniu el nivell necessari per a poder configurar aquest servidor. 
+              Per aquest motiu us aportarà un conjunt de píndoles que us poden ajudar en tot aquest procés.
+              Per a demostrar al vostre cap que podeu encarregar-vos del servidor, 
+              us ha sol·licitat la realització de dues proves prèvies que haureu de realitzar i validar abans de poder començar a configurar el servidor.</p>
+          </div>
+          <div class="enunciat-reto-100">
+            <p class="enunciat-reto-p">Per cada prova superada rebreu una insígnia. Quan reuniu les tres insígnies podreu començar a configurar el servidor.
+              El servidor que se us aportarà és un servidor físic, que podreu trobar a l'aula.
+               Per a poder crear aquest servidor utilitzarem un programari denominat Pfsense.<br> Per a això deureu:</p>
+            <ul>
+              <li class="enunciat-lista">Instal·lar Pfsense sobre el servidor físic a partir de la imatge ISO que se us aportarà. 
+                Es recomana a més realitzar una instal·lació en màquina virtual per a realitzar proves.</li>
+              <li class="enunciat-lista">Configurar les interfícies de xarxa de manera adequada en PFSense tenint en compte que tenim un servidor web, una altra xarxa amb els ordinadors de l'escola i sortida a Internet. 
+                És important recalcar que el servidor, els equips i la sortida a Internet es troben en xarxes diferents (zona desmilitaritzada).</li>
+              <li class="enunciat-lista">Configurar com a mínim una de les següents regles de firewall:</li>
+                <li class="enunciat-lista2">- <b class="b-verde">HTTPS:</b> Configurar la inspecció HTTPS per a la detecció i prevenció de contingut no segur o inapropiat que pugui passar a través de connexions HTTPS.</li>
+                <li class="enunciat-lista2">- <b class="b-verde">Política de balanceig de càrregues:</b> Establir una política qui permet distribuir la càrrega de trànsit en la xarxa per a evitar congestions i millorar el rendiment.</li>
+                <li class="enunciat-lista2">- <b class="b-verde">Control de descàrregues:</b> Establir polítiques per controlar i gestionar descàrregues de grans volums, evitant la saturació de la xarxa i assegurant una distribució equitativa dels recursos.</li>
+                <li class="enunciat-lista2">- <b class="b-verde">Protecció contra malware:</b> Implementar filtres de protecció contra malware i altres amenaces de seguretat per prevenir l'accés a llocs web maliciosos i protegir els usuaris contra descàrregues pernicioses.</li>
+                <li class="enunciat-lista2">- <b class="b-verde">Monitorització i informes:</b> Implementar eines de monitorització i generació de informes per supervisar l'ús d'Internet i identificar patrons d'ús. Aquesta informació pot ser valuosa per a la planificació i la millora de l'entorn d'aprenentatge digital.</li>
+                <li class="enunciat-lista2">- <b class="b-verde">Protecció enfront d'atacs de seguretat externs i intrusos:</b> Instal·lar un sistema de protecció d'intrusos i configurar les regles que es considerin més importants.</li>
+              <li class="enunciat-lista">Instal·lar sobre Pfsense un servidor proxy amb SQUID i aplicar com a mínim una de les següents regles:</li>
+                <li class="enunciat-lista2">- <b class="b-verde">Regles de control d'aplicacions:</b> Establir regles per controlar l'ús d'aplicacions específiques a través de la xarxa, com ara jocs en línia o altres aplicacions no educatives que podrien afectar el rendiment.</li>
+                <li class="enunciat-lista2">- <b class="b-verde">Límits de bandwidth:</b> Configurar límits de banda ampla per evitar l'ús excessiu de recursos de xarxa. Això pot ajudar a mantenir un rendiment equitatiu i evitar congestions.</li>
+                <li class="enunciat-lista2">- <b class="b-verde">Control d'accés basat en polítiques:</b> Establir polítiques d'accés basades en rols o en grups d'usuaris. Això pot permetre diferents nivells d'accés a Internet segons els requisits educatius o els privilegis de l'usuari.</li>
+                <li class="enunciat-lista2">- <b class="b-verde">Gestió de caches:</b> Configurar la gestió de caches per optimitzar el rendiment i reduir el temps de càrrega de pàgines web repetides.</li>
+                <li class="enunciat-lista2">- <b class="b-verde">Planificació d'horaris d'accés:</b> Configurar horaris d'accés per a determinades categories de llocs web, restringint l'accés durant hores no lectives o en períodes específics.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="div-index" id="index">
+        <header class="headerfase">
+          <h2>CONTINGUT</h2>
+        </header>
+        <ul class="ul-index">
+          <li class="li-index2"><a href="#pfsense">PFSense</a></li>
+          <li class="li-index2"><a href="#instalacio">Instal·lació</a></li>
+          <li class="li-index2"><a href="#firewall">Firewall</a></li>
+          <li class="li-index2"><a href="#proxy">Proxy (SQUID)</a></li>
+        </ul>
+      </div>
+      <div class="enunciat-reto-70" id="pfsense">
+        <h3 class="enunciat-reto-titulo">PFSENSE</h3>
+        <p class="enunciat-reto-p">pfSense​ és una distribució personalitzada de FreeBSD adaptat per al seu ús com Firewall i Enrutador. 
+          Es caracteritza per ser de codi obert, pot ser instal·lat en una gran varietat d'ordinadors, i, a més compta amb una interfície web senzilla per a la seva configuració.<br>
+          La següent llista mostra algunes funcionalitats que s'inclouen predefinidament en el sistema:</p>
+          <ul>
+            <li class="enunciat-lista">Firewall</li>
+            <li class="enunciat-lista">State Table</li>
+            <li class="enunciat-lista">Network Address Translation (NAT)</li>
+            <li class="enunciat-lista">Multi-wan</li>
+            <li class="enunciat-lista">VPN</li>
+            <li class="enunciat-lista">Servidor PPPoE</li>
+            <li class="enunciat-lista">Servidor DNS</li>
+            <li class="enunciat-lista">Servidor DHCP</li>
+          </ul>
+      </div>
+      <div class="div-planol-pr">
+        <div class="enunciat-reto-centro">
+        <img src="images/pfsense-logo.png" alt="PFSense logo" class="I-pfsense">
+      </div>
+      </div>
+
+      <div class="enunciat-reto-100" id="instalacio">
+        <h3 class="enunciat-reto-titulo">INSTAL·LACIÓ</h3>
+        <p class="enunciat-reto-p">Un cop sabem què és pfSense, el primer que farem serà fer la instal·lació. Hem creat un <a class="b-verde" href="manual/manual-pfsense.pdf" target="_blank">manual</a> pas a pas per tenir una guia.</p>
+        <div class="enunciat-reto-centro">
+          <embed src="manual/manual-pfsense.pdf" class="embed-manual">
+        </div>
+      </div>
+
+      <div class="enunciat-reto-100" id="firewall">
+        <h3 class="enunciat-reto-titulo">FIREWALL</h3>
+        <p class="enunciat-reto-p">Per al firewall només configurarem dues regles:</p>
+        <ul>
+          <li class="enunciat-lista">Control de descàrregues: Establir polítiques per controlar i gestionar descàrregues de grans volums, 
+            evitant la saturació de la xarxa i assegurant una distribució equitativa dels recursos.</li>
+        </ul>
+        <p class="enunciat-reto-p">
+          Controlar les descàrregues és una funció important en un firewall per diverses raons clau:</p>
+        <ul>
+          <li class="enunciat-lista2">- <b class="b-verde">Gestió  del consum de banda ampla:</b> Les descàrregues de grans volums poden consumir una quantitat significativa de la capacitat de la xarxa. 
+            Això és particularment important en entorns on la capacitat de la xarxa és limitada o compartida entre diversos usuaris o aplicacions.</li>
+          <li class="enunciat-lista2">- <b class="b-verde">Priorització del trànsit:</b> En llocs on hi ha múltiples usuaris o aplicacions que competeixen per recursos de xarxa limitats, com ara oficines, escoles o empreses, el firewall pot prioritzar cert tipus de trànsit sobre altres. 
+            Per exemple, es pot donar prioritat al trànsit crític per a les operacions de negocis mentre es limita la velocitat de les descàrregues no essencials.</li>
+          <li class="enunciat-lista2">- <b class="b-verde">Optimització del rendiment:</b> Limitar les descàrregues de grans volums pot ajudar a mantenir un bon rendiment de la xarxa per a tots els usuaris. 
+            Evita que una sola descàrrega monopolitzi tota la capacitat de la xarxa, garantint una distribució equitativa dels recursos i un funcionament fluid per a tothom.</li>
+        </ul>
+        <p class="enunciat-reto-p">Per implementar aquesta regla a PFSense hem d'anar a <b class="b-verde">Firewall > Traffic Shaper</b>.</p>
+        <div class="enunciat-reto-centro">
+          <img src="images/captura-firewall.png" alt="Firewall" class="I-topologia-mixto">
+        </div>
+        <ul>
+          <li class="enunciat-lista">Monitorització i informes: Implementar eines de monitorització i generació de informes per supervisar l'ús d'Internet i identificar patrons d'ús. 
+            Aquesta informació pot ser valuosa per a la planificació i la millora de l'entorn d'aprenentatge digital.
+          </li>
+        </ul>
+        <div class="enunciat-reto-centro">
+          <img src="images/foto3-reto8.png" alt="Firewall" class="I-topologia-mixto">
+        </div>
+      </div>
+
+      <div class="enunciat-reto-100" id="proxy">
+        <h3 class="enunciat-reto-titulo">Proxy amb SQUID</h3>
+        <p class="enunciat-reto-p">Per al proxy configurarem les següentes regles:</p>
+        <ul>
+          <li class="enunciat-lista">Regles de control d'aplicacions: Establir regles per controlar l'ús d'aplicacions específiques a través de la xarxa, 
+            com ara jocs en línia o altres aplicacions no educatives que podrien afectar el rendiment.</li>
+          <li class="enunciat-lista">Planificació d'horaris d'accés: Configurar horaris d'accés per a determinades categories de llocs web, 
+            restringint l'accés durant hores no lectives o en períodes específics.</li>
+          <li class="enunciat-lista">Control d'accés basat en polítiques: Establir polítiques d'accés basades en rols o en grups d'usuaris. 
+            Això pot permetre diferents nivells d'accés a Internet segons els requisits educatius o els privilegis de l'usuari.</li>
+
+        </ul>
+        <p class="enunciat-reto-p">El plugin de Squid a PFSense té moltes limitacions deixant una configuració molt bàsica i sense cumplir els requeriments mínims que volem, 
+          l'alternativa a aixó és instal·lar i configurar un proxy extern per desprès enllaçar-lo al nostre firewall de Pfsense. Per fer aquesta configuració hem d'anar a: <b class="b-verde">System > General Setup > Proxy Support</b></p>
+        <p class="enunciat-reto-p">Ens demanará el port i l'url del nostre Proxy, és a dir, la IP. En el nostre cas utilitzarem el proxy configurat a l'apartat de <a class="b-verde" href="reto10.html">Implementació de Servidors Linux i Windows</a>. 
+          Un cop configurat, haurà de quedar como a la captura de pantalla.</p>
+        <div class="enunciat-reto-centro">
+          <img src="images/captura-proxy.png" alt="PFSense logo" class="I-codigo">
+        </div>
+      </div>
+
+    </section>
+
+
+        <!--           Footer           -->
+
+        <footer>
+          <p>Copyright © 2024 - SMIX2A | Ivory, Chenxiao, Sergio, Lucas<br>Tots els drets reservats.</p>
+          <ul class="footer-listas">
+            <li class="footer-lista"><a href="https://www.youtube.com/user/LabdooDACH" target="_blank"><img src="images/youtube.png" alt="Youtube" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.facebook.com/Labdoo/" target="_blank"><img src="images/facebook.png" alt="Facebook" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.linkedin.com/company/labdoo.org/about/" target="_blank"><img src="images/linkedin.png" alt="Linkedin" class="icono-footer"></a></li>
+          </ul>
+        </footer>
+      </body>
+    </html>

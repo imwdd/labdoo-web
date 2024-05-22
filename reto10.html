@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/boladelmundo.png">
+    <title>Implementació de servidors - Projecte Labdoo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      function myFunction(id) {
+        let copyText = document.getElementById(id);
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.textContent);
+        // Alert the copied text
+        alert("Comanda copiada: " + copyText.textContent);
+      }
+      </script>
+  </head>
+  <body>
+    
+    <!--          Header          -->
+
+    <header class="header">
+        <div class="container">
+        <div class="divlogo">
+            <a href="index.html"><img src="images/logo-labdoo.png" alt="Logo Labdoo" class="logo_labdoo"></a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link"><a href="index.html"><img src="images/homepage.png" class="icono-navbar"></a></li>
+                <li class="nav-link"><a href="formulario.html"><img src="images/formulario.png" class="icono-navbar"></a></li>      
+                <li class="nav-link"><a href="equipo.html"><img src="images/equipo.png" class="icono-navbar"></a></li> 
+                <li class="nav-link-d"><img src="images/menu.png" class="icono-navbar">
+                    <div class="dropdown-content">
+                      <a href="reto1.html" class="no-active-reto">Elecció de la infraestructura</a>
+                      <a href="reto2.html" class="no-active-reto">Disseny i implementació de la infraestructura física i lògica</a>
+                      <a href="reto3.html" class="no-active-reto">Instal·lació dels servidors</a>
+                      <a href="reto4.html" class="no-active-reto">Creació d'usuaris i gestió de permisos i polítiques i directives</a>
+                      <a href="reto6.html" class="no-active-reto">Manteniment del nostre servidor</a>
+                      <a href="reto7.html" class="no-active-reto">Documentació web del projecte</a>
+                      <a href="reto8.html" class="no-active-reto">Protecció de la nostra xarxa</a>
+                      <a href="reto9.html" class="no-active-reto">Protecció de les nostres dades</a>
+                      <a href="reto10.html" class="active-reto">Implementació de servidors Linux i Windows</a>
+                      <a href="reto5.html" class="no-active-reto">Sanejament de portàtils Labdoo</a>
+                      </div>
+                </li>            
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div class="flecha-index">
+      <a href="#index">
+          <img src="images/flecha.png" class="flecha-index">
+      </a>
+    </div>
+
+    <section class="section-retos-enunciat">
+      <header class="headerfase">
+        <h2>IMPLEMENTACIÓ DE SERVIDORS LINUX I WINDOWS</h2>
+      </header>
+      <div class="enunciat-reto-70">
+        <h3 class="enunciat-reto-titulo">L'encàrrec consisteix en</h3>
+        <p class="enunciat-reto-p">Aquest encàrrec implica la implementació d'un nou conjunt de servidors per optimitzar la infraestructura de xarxa actual d'una escola amb una topologia heretada. 
+          Amb l'objectiu de millorar l'eficiència i la confiabilitat, es proposa l'ús de diversos servidors clau</p>
+        <ul>
+          <li class="enunciat-lista">El servidor DHCP facilitarà l'assignació dinàmica d'adreces IP, assegurant una gestió efectiva de la xarxa.</li>
+          <li class="enunciat-lista">El servidor DNS, es millorarà la gestió dels noms de domini, essencial per a una navegació web eficient.</li>
+          <li class="enunciat-lista">El servidor FTP permetrà la compartició d'arxius de manera segura i ràpida.</li>
+          <li class="enunciat-lista">La implementació d'un servidor proxy millorarà la seguretat de la xarxa, filtrant i gestionant l'accés a Internet.</li>
+          <li class="enunciat-lista">El servei de correu electrònic simplificarà la comunicació interna, oferint una plataforma eficaç per a la interacció entre membres de la comunitat educativa.</li>
+        </ul>
+
+      </div>
+      <div class="div-planol-pr">
+        <img src="gif/gif-reto10.gif" alt="GIF generat per IA" class="I-topologia">
+      </div>
+      <div class="enunciat-reto-100">
+        <p class="enunciat-reto-p">Aquest conjunt de millores té com a objectiu proporcionar una infraestructura de xarxa més robusta i adaptada a les creixents demandes de la institució educativa.
+          A més, cal destacar que la implementació d'aquests servidors serà totalment customitzable i es realitzarà sota el criteri dels professionals encarregats de la infraestructura informàtica.
+          Aquesta flexibilitat permetrà als responsables de la xarxa adaptar els nous servidors a les necessitats específiques de la institució educativa, tenint en compte els requeriments particulars i les consideracions pròpies de la topologia de la xarxa heretada. 
+          Això assegurarà una implementació personalitzada, optant per les configuracions que millor s'ajustin als objectius i requisits específics de la nostra escola. 
+          Aquest enfocament col·laboratiu amb els professionals garantirà una transició suau i efectiva cap a una infraestructura de xarxa més moderna i eficient.
+        </p>
+      </div>
+
+      <div class="div-index" id="index">
+        <header class="headerfase">
+          <h2>CONTINGUT</h2>
+        </header>
+        <p class="enunciat-reto-p">* Als dos servidors tindrem un adaptador configurat en xarxa NAT</p>
+        <ul class="ul-index">
+          <li class="li-index"><a href="#dhcp">DHCP</a></li>
+          <li class="li-index"><a href="#dns">DNS</a></li>
+          <li class="li-index"><a href="#ftp">FTP</a></li>
+          <li class="li-index"><a href="#proxy">Proxy</a></li>
+          <li class="li-index"><a href="#correuelectronic">Correu electrònic</a></li>
+          <li class="li-index"><a href="#serveiweb">Servei web</a></li>
+        </ul>
+      </div>
+
+
+
+      <div class="enunciat-reto-100" id="dhcp">
+        <h3 class="enunciat-reto-titulo">DHCP</h3>
+        <p class="enunciat-reto-p">El DHCP (Dynamic Host Configuration Protocol) és un protocol de xarxa que assigna automàticament adreces IP i altres paràmetres de configuració a dispositius connectats a la xarxa, com ara ordinadors o telèfons intel·ligents. 
+          Això evita la necessitat de configurar manualment cada dispositiu amb una adreça IP, simplificant la gestió de la xarxa.
+        <br>
+        El nostre servei DHCP està configurat de la següent manera:</p>
+        <ul>
+          <li class="enunciat-lista">La nostra ID de xarxa és: 10.0.2.0/24</li>
+          <li class="enunciat-lista">Les primeres 10 IP (10.0.2.1 - 10.0.2.11) queden excluides ja que les reservem per els professors, posteriorment ens servirà per diferenciar entre les restriccions dels alumnes i dels professors.</li>
+          <li class="enunciat-lista">Les IP es renovaran cada tres dies.</li>
+        </ul>
+    
+        <h4 class="enunciat-reto-titulo2">Windows Server</h4>
+        <p class="enunciat-reto-p">A continuació tindreu un <a class="b-verde" href="manual/manual-windows-dhcp.pdf">manual</a> de com fer tota aquesta configuració. 
+          Adicionalment a Windows hem creat un filtre per mantenir la nostra xarxa exclusiva per ordinadors.</p>
+        <div class="enunciat-reto-centro">
+          <embed src="manual/manual-windows-dhcp.pdf" class="embed-manual">
+        </div>
+
+        <h4 class="enunciat-reto-titulo2">Ubuntu Server</h4>
+        <p class="enunciat-reto-p">En aquest cas hem creat 5 subxarxes per dividir les 5 classes lògicament. Per al nostre Ubuntu Server haurem de fer diverses configuracions prèvies, primer ens assegurarem de tenir el programari actualitzat amb les següents comandes:</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p4">sudo apt update</p>
+            <button class="terminal-button" onclick="myFunction('p4')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p5">sudo apt upgrade</p>
+            <button class="terminal-button" onclick="myFunction('p5')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">També instal·larem una interfície gràfica per facilitar-nos el treball.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p6">sudo apt install –no-install-recommends lubuntu-desktop</p>
+            <button class="terminal-button" onclick="myFunction('p6')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        
+        <p class="enunciat-reto-p">Un cop instalada la interfície gràfica, reiniciarem el servidor per començar a utilitzar-la.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p7">sudo reboot</p>
+            <button class="terminal-button" onclick="myFunction('p7')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">La última preparació prèvia serà configurar una IP estàtica al servidor, per això haurem de modificar el següent arxiu:</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p8">sudo nano /etc/netplan/00-installer-config.yaml</p>
+            <button class="terminal-button" onclick="myFunction('p8')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <p class="enunciat-reto-p">L'arxiu haurà de quedar així:</p>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-yaml-ubuntu.png" alt="Arxiu YAML d'Ubuntu Server" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Un cop configurada la nostra IP estàtica haurem d'aplicar els canvis, és crucial que no surti cap error a l'hora d'executar la comanda, de lo contrari no podrem avançar al següent pas.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p9">sudo netplan apply</p>
+            <button class="terminal-button" onclick="myFunction('p9')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per a configurar DHCP a Ubuntu Server el primer que haurem de fer serà instal·lar el paquet isc-dhcp-server amb la següent comanda:</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p10">sudo apt-get install isc-dhcp-server</p>
+            <button class="terminal-button" onclick="myFunction('p10')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per configurar les cinc subxarxes haurem de modificar el següent arxiu i afegir les següents lineas:</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p12">sudo nano /etc/dhcp/dhcpd.conf</p>
+            <button class="terminal-button" onclick="myFunction('p12')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-dhcpd1.png" alt="Arxiu dhcpd.conf d'Ubuntu Server" class="I-dhcp">
+          <img src="images/archivo-dhcpd2.png" alt="Arxiu dhcpd.conf d'Ubuntu Server" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Ara per indicar la interfície on volem que funcioni el DHCP haurem de modificar el següent arxiu i modificarem la següent linea:</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p13">sudo nano /etc/default/isc-dhcp-server</p>
+            <button class="terminal-button" onclick="myFunction('p13')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-dhcp1.png" alt="Arxiu isc-dhcp-server d'Ubuntu Server" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Per aplicar tots els canvis reiniciarem el servei DHCP.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p15">sudo systemctl restart isc-dhcp-server</p>
+            <button class="terminal-button" onclick="myFunction('p15')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per acabar, comprovarem que no tinguem cap error i el nostre servei estigui correctament engegat.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p16">sudo systemctl status isc-dhcp-server</p>
+            <button class="terminal-button" onclick="myFunction('p16')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/status-dhcp.png" alt="Comanda status dhcp d'Ubuntu Server" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Per últim, verificarem que el nostre servei DHCP estigui donant les IP correctes des d'un client. 
+          El nostre client haurà de tenir la IP per DHCP i haurà de tenir una IP dins de les nostres subxarxes.</p>
+        <div class="enunciat-reto-centro">
+          <img src="images/windows-ipconfig.png" alt="Comanda ipconfig a Windows" class="I-dhcp">
+        </div>
+      </div>
+
+
+
+      <div class="enunciat-reto-100" id="dns">
+        <h3 class="enunciat-reto-titulo">DNS</h3>
+        <p class="enunciat-reto-p">
+          El DNS (Domain Name System) és un sistema que converteix els noms de domini, com ara "google.com", en adreces IP, que són números que les màquines utilitzen per identificar-se i comunicar-se entre si a la xarxa d'Internet. 
+          Bàsicament, funciona com una agenda telefònica per a la web, permetent als usuaris accedir als llocs web utilitzant noms de domini fàcils de recordar en lloc d'haver de recordar les seves adreces IP numèriques.
+          El nostre servei DNS està configurat amb el següent domini:</p>
+        <ul>
+          <li class="enunciat-lista">Windows: escolalabdoo.org</li>
+          <li class="enunciat-lista">Ubuntu: escolalabdoo.org</li>
+        </ul>
+        <p class="enunciat-reto-p">Amb els següents hosts:</p>
+        <ul>
+          <li class="enunciat-lista">www</li>
+          <li class="enunciat-lista">ftp</li>
+          <li class="enunciat-lista">mail</li>
+        </ul>
+
+        <h4 class="enunciat-reto-titulo2">Windows Server</h4>
+        <p class="enunciat-reto-p">A continuació tindreu un <a class="b-verde" href="manual/manual-windows-dns.pdf" target="_blank">manual</a> de com fer tota aquesta configuració.</p>
+        <div class="enunciat-reto-centro">
+          <embed src="manual/manual-windows-dns.pdf" class="embed-manual">
+        </div>
+
+        <h4 class="enunciat-reto-titulo2">Ubuntu Server</h4>
+        <ul>
+          <li class="enunciat-lista">És important que s'hagin seguit les instruccions de com mantenir el programari actualitzat i com configurar una IP estàtica per al servidor. Tot això explicat a l'apartat <a class="b-verde" href="#dhcp">DHCP</a>.</li>
+        </ul>
+
+        <p class="enunciat-reto-p">Per començar haurem d'instal·lar els paquets necessaris.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p17">sudo apt-get install bind9 bind9utils bind9-doc</p>
+            <button class="terminal-button" onclick="myFunction('p17')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Un cop instal·lats, modificarem el següent arxiu i haurà de quedar com s'aprecia a la captura de pantalla:</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p18">sudo nano /etc/bind/named.conf.options</p>
+            <button class="terminal-button" onclick="myFunction('p18')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-named-conf-options.png" alt="Arxiu named.conf.options a Ubuntu Server" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Ara, modificarem aquest altre arxiu i haurà de quedar com s'aprecia a la captura de pantalla:</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p19">sudo nano /etc/default/named</p>
+            <button class="terminal-button" onclick="myFunction('p19')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-named.png" alt="Arxiu named a Ubuntu Server" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Ara, comprovarem que les modificacions que hem fet siguin correctes.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p20">sudo named-checkconf</p>
+            <button class="terminal-button" onclick="myFunction('p20')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Passarem a modificar el següent arxiu de manera que quedi como a la captura de pantalla:</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p21">sudo nano /etc/bind/named.conf.local</p>
+            <button class="terminal-button" onclick="myFunction('p21')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-named-conf-local.png" alt="Arxiu named.conf.local a Ubuntu Server" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">El següent que farem serà crear la zona directa i la zona inversa, haurem de crear una carpeta anomenada <b class="b-verde">zones</b> al directori <b class="b-verde">/etc/bind</b>.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p22">sudo mkdir zones</p>
+            <button class="terminal-button" onclick="myFunction('p22')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Dins de la carpeta <b class="b-verde">zones</b> crearem un primer arxiu anomenat db.[EL VOSTRE DOMINI], en el nostre cas s'anomenará <b class="b-verde">db.grup1labdoo.org</b>i el deixarem com s'aprecia a la captura. Aquest arxiu serà la nostra zona directa.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p50">sudo nano db.escolalabdoo.org</p>
+            <button class="terminal-button" onclick="myFunction('p50')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-db1.png" alt="Arxiu zona directa a Ubuntu Server" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Dins de la carpeta <b class="b-verde">zones</b> crearem un segon arxiu anomenat db.[LA VOSTRA IP INVERSA], en el nostre cas s'anomenará <b class="b-verde">db.2.0.10</b> i el deixarem com s'aprecia a la captura. Aquest arxiu serà la nostra zona inversa.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p23">sudo nano db.2.0.10</p>
+            <button class="terminal-button" onclick="myFunction('p23')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-db2.png" alt="Arxiu zona inversa a Ubuntu Server" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Un cop creats els nostres arxius, comprovarem que la sintaxis dels nostres arxius sigui correcte.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p24">sudo named-checkzone escolalabdoo.org db.escolalabdoo.org && db.02.0.10.in-addr.arpa db.02.0.10</p>
+            <button class="terminal-button" onclick="myFunction('p24')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per últim reiniciarem el servei bind per guardar tots els canvis.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p25">sudo systemctl restart bind9</p>
+            <button class="terminal-button" onclick="myFunction('p25')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per comprovar que está en funcionament utilitzarem la comanda nslookup a un client.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p26">nslookup www.escolalabdoo.org</p>
+            <button class="terminal-button" onclick="myFunction('p26')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/nslookup-windows.png" alt="Comanda nslookup" class="I-dhcp">
+        </div>
+      </div>
+
+
+
+      <div class="enunciat-reto-100" id="ftp">
+        <h3 class="enunciat-reto-titulo">FTP</h3>
+        <p class="enunciat-reto-p">
+          FTP significa "File Transfer Protocol" (Protocol de Transferència de Fitxers). 
+          És un protocol de xarxa utilitzat per transferir fitxers entre ordinadors a través d'Internet o una xarxa local. 
+          Permet la transferència de fitxers entre un client (ordinador de l'usuari) i un servidor (ordinador remot) de manera eficient i segura. 
+          Els usuaris poden utilitzar clients FTP per connectar-se a servidors FTP i transferir fitxers, com ara documents, imatges o arxius de programari, entre els dos dispositius.
+          Per al nostre FTP comptarem amb la mateixa estructura d'usuaris explicada a l'apartat <a class="b-verde" href="reto4.html">CREACIÓ D'USUARIS I GESTIÓ DE PERMISOS I POLÍTIQUES I DIRECTIVES</a> i amb una estructura de permisos similar.</p>
+
+        <h4 class="enunciat-reto-titulo2">Windows Server</h4>
+        <p class="enunciat-reto-p">A continuació tindreu un <a class="b-verde" href="manual/manual-windows-ftp.pdf" target="_blank">manual</a> de com fer tota aquesta configuració.</p>
+        <div class="enunciat-reto-centro">
+          <embed src="manual/manual-windows-ftp.pdf" class="embed-manual">
+        </div>
+
+        <h4 class="enunciat-reto-titulo2">Ubuntu Server</h4>
+        <ul>
+          <li class="enunciat-lista">És important que s'hagin seguit les instruccions de com mantenir el programari actualitzat i com configurar una IP estàtica per al servidor. Tot això explicat a l'apartat <a class="b-verde" href="#dhcp">DHCP</a>.</li>
+        </ul>
+
+        <p class="enunciat-reto-p">Primer de tot instal·larem el servei vsftpd.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p27">sudo apt install vsftpd</p>
+            <button class="terminal-button" onclick="myFunction('p27')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Un cop instal·lat passarem a la configuració. Haurem d'afegir les següents lineas, recordar revisar que no quedin repetides.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p28">sudo nano /etc/vsftpd.conf</p>
+            <button class="terminal-button" onclick="myFunction('p28')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-vsftpd1.png" alt="Arxiu vsftpd.conf d'Ubuntu Server" class="I-dhcp">
+          <img src="images/archivo-vsftpd2.png" alt="Arxiu dhcpd.conf d'Ubuntu Server" class="I-dhcp">
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-vsftpd4.png" alt="Arxiu vsftpd.conf d'Ubuntu Server" class="I-dhcp">
+          <img src="images/archivo-vsftpd5.png" alt="Arxiu dhcpd.conf d'Ubuntu Server" class="I-dhcp">
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-vsftpd3.png" alt="Arxiu dhcpd.conf d'Ubuntu Server" class="I-dhcp">
+        </div>
+        <p class="enunciat-reto-p">Seguint totes les indicacions podrem instal·lar el servei vsftpd per utilitzar FileZilla Server, ara el que quedarà serà crear i establir una estructura d'usuaris, carpetes i permisos. 
+          Tot això està explicat i documentat a l'apartat <a class="b-verde" href="https://drive.google.com/drive/folders/1tVs0tflZ_I3tg11RRdx2lO110oFDBy3O?usp=sharing" target="_blank">CREACIÓ D'USUARIS I GESTIÓ DE PERMISOS I POLÍTIQUES I DIRECTIVES</a></p>
+      </div>
+
+
+
+      <div class="enunciat-reto-100" id="proxy">
+        <h3 class="enunciat-reto-titulo">PROXY</h3>
+        <p class="enunciat-reto-p">
+          Un servidor proxy és un intermediari entre el dispositiu de l'usuari i Internet. Quan un usuari sol·licita un recurs, com ara una pàgina web, a través d'un servidor proxy, la petició primerament va al servidor proxy i aquest envia la petició al servidor de destinació. 
+          En essència actua com a representant de l'usuari davant del servidor de destinació. Això pot servir diversos propòsits, com ara millorar la privadesa de l'usuari o controlar l'accés a Internet en una xarxa corporativa. El nostre proxy compta amb les següents regles:
+        </p>
+        <p class="enunciat-reto-p"></p>
+        <ul>
+          <li class="enunciat-lista">Horari permès</li>
+            <li class="enunciat-lista2">Dilluns a divendres de 08:00 a 14:00</li>
+          <li class="enunciat-lista">Les primeres 10 IP estaran reservades per els professors, per tant, no tindran cap restricció. </li>
+          <li class="enunciat-lista">Dominis bloquejats</li>
+            <li class="enunciat-lista2">- https://store.steampowered.com/</li>
+            <li class="enunciat-lista2">- https://www.tiktok.com/es/</li>
+            <li class="enunciat-lista2">- https://www.instagram.com/</li>
+            <li class="enunciat-lista2">- https://www.facebook.com/</li>
+            <li class="enunciat-lista2">- https://www.mihoyo.com/en/</li>
+            <li class="enunciat-lista2">- https://www.ea.com</li>
+        </ul>
+        <p class="enunciat-reto-p">Crearem dues regles per restringir paraules, una està dissenyada per activar-la i desactivar-la segons la necessitat i l'altre està dissenyada per ser estàtica. </p>
+        <ul>
+          <li class="enunciat-lista">Paraules denegades 1</li>
+            <li class="enunciat-lista2">- game</li>
+            <li class="enunciat-lista2">- play</li>
+            <li class="enunciat-lista2">- juego</li>
+            <li class="enunciat-lista2">- jogo</li>
+            <li class="enunciat-lista2">- joeux</li>
+            <li class="enunciat-lista2">- riot</li>
+            <li class="enunciat-lista2">- roblox</li>
+            <li class="enunciat-lista2">- minecraft</li>
+            <li class="enunciat-lista2">- valorant</li>
+            <li class="enunciat-lista2">- fortnite</li>
+            <li class="enunciat-lista2">- genshin</li>
+            <li class="enunciat-lista2">- netflix</li>
+            <li class="enunciat-lista2">- twitch</li>
+            <li class="enunciat-lista2">- disneyplus</li>
+          <li class="enunciat-lista">Paraules denegades 2</li>
+            <li class="enunciat-lista2">- xxx</li>
+            <li class="enunciat-lista2">- porn</li>
+        </ul> 
+        
+        <h4 class="enunciat-reto-titulo2">Windows Server</h4>
+        <p class="enunciat-reto-p">A continuació tindreu un <a class="b-verde" href="manual/manual-windows-ftp.pdf" target="_blank">manual</a> de com fer tota aquesta configuració.</p>
+        <div class="enunciat-reto-centro">
+          <embed src="manual/manual-windows-proxy.pdf" class="embed-manual">
+        </div>
+
+        <h4 class="enunciat-reto-titulo2">Ubuntu Server</h4>
+        <ul>
+          <li class="enunciat-lista">És important que s'hagin seguit les instruccions de com mantenir el programari actualitzat i com configurar una IP estàtica per al servidor. Tot això explicat a l'apartat <a class="b-verde" href="#dhcp">DHCP</a>.</li>
+        </ul>
+
+        <p class="enunciat-reto-p">Primer de tot instal·larem el paquet squid.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p51">sudo apt install squid -y</p>
+            <button class="terminal-button" onclick="myFunction('p51')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Un cop instal·lat l'iniciarem i l'habilitarem.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p29">sudo systemctl start squid</p>
+            <button class="terminal-button" onclick="myFunction('p29')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p30">sudo systemctl enable squid</p>
+            <button class="terminal-button" onclick="myFunction('p30')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">A la carpeta /etc/squid/ crearem tres arxius previs.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p31">sudo nano /etc/squid/dominios-denegados</p>
+            <button class="terminal-button" onclick="myFunction('p31')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/ubuntu-squid-dominiosdenegados.png" alt="Arxiu dominios-denegados ubuntu" class="I-dhcp">
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p32">sudo nano /etc/squid/expresiones1-denegadas</p>
+            <button class="terminal-button" onclick="myFunction('p32')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/ubuntu-squid-expresionesdenegadas.png" alt="Arxiu expresiones-denegadas ubuntu" class="I-dhcp">
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p33">sudo nano /etc/squid/expresiones2-denegadas</p>
+            <button class="terminal-button" onclick="myFunction('p33')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/ubuntu-squid-expresionesdenegadas2.png" alt="Arxiu expresiones-denegadas ubuntu" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Un cop creat els arxius passarem a crear les regles ACL al següent arxiu:</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p34">sudo nano /etc/squid/squid.conf</p>
+            <button class="terminal-button" onclick="myFunction('p34')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/ubuntu-squid-squidconf1.png" alt="Arxiu squid.conf ubuntu" class="I-dhcp">
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/ubuntu-squid-squidconf2.png" alt="Arxiu squid.conf ubuntu" class="I-dhcp">
+        </div>
+
+
+
+        <div class="enunciat-reto-100" id="correuelectronic">
+          <h3 class="enunciat-reto-titulo">CORREU ELECTRÒNIC</h3>
+          <p class="enunciat-reto-p">El servei de correu electrònic és un sistema que permet als usuaris enviar i rebre missatges digitals a través d'Internet. 
+            Funciona mitjançant servidors de correu que gestionen la recepció, emmagatzematge i lliurament dels missatges. 
+            Els usuaris poden accedir als seus comptes de correu electrònic a través de clients de correu electrònic, aplicacions web o dispositius mòbils.
+          </p>
+          <p class="enunciat-reto-p">
+            Estarem utilitzant el domini configurat a l'anterior apartat <a class="b-verde" href="#dns">DNS, és important que el nostre servei DNS estigui correctament instal·lat i en funcionament.</a>
+          </p>
+
+          <h4 class="enunciat-reto-titulo2">Windows Server</h4>
+          <p class="enunciat-reto-p">A continuació tindreu un <a class="b-verde" href="manual/manual-windows-ftp.pdf" target="_blank">manual</a> de com fer tota aquesta configuració.</p>
+          <div class="enunciat-reto-centro">
+            <embed src="manual/manual-windows-correu.pdf" class="embed-manual">
+          </div>
+
+          <h4 class="enunciat-reto-titulo2">Ubuntu Server</h4>
+          <ul>
+            <li class="enunciat-lista">És important que s'hagin seguit les instruccions de com mantenir el programari actualitzat i com configurar una IP estàtica per al servidor. Tot això explicat a l'apartat <a class="b-verde" href="#dhcp">DHCP</a>.</li>
+          </ul>
+
+          <p class="enunciat-reto-p">Primer de tot instal·larem el paquet Postfix:</p>
+          <div class="enunciat-reto-centro">
+            <div class="terminal">
+              <p class="sudo" id="p35">sudo apt install postfix</p>
+              <button class="terminal-button" onclick="myFunction('p35')"><img src="images/clipboard.png" class="terminal-icono"></button>
+            </div>
+          </div>
+
+          <p class="enunciat-reto-p">Un cop instal·lat, començarem amb la configuració.</p>
+          <div class="enunciat-reto-centro">
+            <div class="terminal">
+              <p class="sudo" id="p36">sudo nano /etc/postfix/main.cf</p>
+              <button class="terminal-button" onclick="myFunction('p36')"><img src="images/clipboard.png" class="terminal-icono"></button>
+            </div>
+          </div>
+          <ul>
+            <li class="enunciat-lista2">- En el primer requadre hem de posar el PTR que hem asignat per al mail.</li>
+            <li class="enunciat-lista2">- En el segon requadre especificarem el nostre domini.</li>
+            <li class="enunciat-lista2">- En el tercer requadre escriurem l'origen.</li>
+            <li class="enunciat-lista2">- Afegirem el nostre domini de nou a la linea de "mydestination".</li>
+            <li class="enunciat-lista2">- A la linea de "mynetworks" indicarem la xarxa que volem utilitzar.</li>
+            <li class="enunciat-lista2">- Per últim, escriurem Maildir/ a la última linea.</li>
+          </ul>
+          <div class="enunciat-reto-centro">
+            <img src="images/postfix.maincf.png" alt="Arxiu main.cf de Postfix a Ubuntu" class="I-codigo">
+          </div>
+
+          <p class="enunciat-reto-p">Acabada la configuració de Postfix, passarem amb Dovecot.</p>
+          <div class="enunciat-reto-centro">
+            <div class="terminal">
+              <p class="sudo" id="p37">sudo apt install dovecot-core dovecot-imapd</p>
+              <button class="terminal-button" onclick="myFunction('p37')"><img src="images/clipboard.png" class="terminal-icono"></button>
+            </div>
+          </div>
+          
+          <p class="enunciat-reto-p">Seguidament, passarem a la configuració de Dovecot.</p>
+          <div class="enunciat-reto-centro">
+            <div class="terminal">
+              <p class="sudo" id="p38">sudo nano /etc/dovecot/conf.d/10-mail.conf</p>
+              <button class="terminal-button" onclick="myFunction('p38')"><img src="images/clipboard.png" class="terminal-icono"></button>
+            </div>
+          </div>
+          <p class="enunciat-reto-p">En aquest arxiu haurem de descomentar la primera linea indicada (treient-li el #) i comentar la segona linea indicada.</p>
+          <div class="enunciat-reto-centro">
+            <img src="images/dovecot-mailconf.png" alt="Arxiu mail.conf de Dovecot a Ubuntu" class="I-dhcp">
+          </div>
+
+          <p class="enunciat-reto-p">Ara passarem a modificar el següent arxiu:</p>
+          <div class="enunciat-reto-centro">
+            <div class="terminal">
+              <p class="sudo" id="p39">sudo nano /etc/dovecot/conf.d/10-ssl.conf</p>
+              <button class="terminal-button" onclick="myFunction('p39')"><img src="images/clipboard.png" class="terminal-icono"></button>
+            </div>
+          </div>
+          <p class="enunciat-reto-p">A la primera linea indicada haurem de reemplaçar la paraula "yes" per "no" i comentar les dues lineas dins del requadre(afegint # al principi de la linea)</p>
+          <div class="enunciat-reto-centro">
+            <img src="images/dovecot-sslconf.png" alt="Arxiu ssl.conf de Dovecot a Ubuntu" class="I-dhcp">
+          </div>
+
+          <p class="enunciat-reto-p">Per acabar la configuració de Dovecot, modificarem aquest arxiu:</p>
+          <div class="enunciat-reto-centro">
+            <div class="terminal">
+              <p class="sudo" id="p40">sudo nano /etc/dovecot/conf.d/10-auth.conf</p>
+              <button class="terminal-button" onclick="myFunction('p40')"><img src="images/clipboard.png" class="terminal-icono"></button>
+            </div>
+          </div>
+          <p class="enunciat-reto-p">A la linea indicada hem de canviar la paraula "yes" per "no"</p>
+          <div class="enunciat-reto-centro">
+            <img src="images/dovecot-authconf.png" alt="Arxiu auth.conf de Dovecot a Ubuntu" class="I-dhcp">
+          </div>
+
+          <p class="enunciat-reto-p">Per últim habilitarem els ports necessaris per fer servir el servei de correu electrònic.</p>
+          <div class="enunciat-reto-centro">
+            <div class="terminal">
+              <p class="sudo" id="p41">sudo ufw allow 143</p>
+              <button class="terminal-button" onclick="myFunction('p41')"><img src="images/clipboard.png" class="terminal-icono"></button>
+            </div>
+          </div>
+          <div class="enunciat-reto-centro">
+            <div class="terminal">
+              <p class="sudo" id="p42">sudo ufw allow 25</p>
+              <button class="terminal-button" onclick="myFunction('p42')"><img src="images/clipboard.png" class="terminal-icono"></button>
+            </div>
+          </div>
+
+          <p class="enunciat-reto-p">Per començar a enviar correus electrònics haurem d'instal·lar l'aplicació Thunderbird a un client i iniciar sessió (els usuaris del sistema son els mateixos usuaris que els utilitzats en el correu electrònic).</p>
+      </div>
+
+
+
+      <div class="enunciat-reto-100" id="serveiweb">
+        <h3 class="enunciat-reto-titulo">SERVEI WEB</h3>
+        <p class="enunciat-reto-p">
+          Un servei web és un sistema a través del qual les aplicacions i sistemes poden comunicar-se i intercanviar dades a través d'Internet utilitzant protocols estàndard com HTTP. 
+          Aquest permet accedir a funcionalitats i dades d'altres aplicacions o sistemes de manera remota, facilitant la integració i la interacció entre diferents plataformes i sistemes distribuïts.
+          En el nostre cas l'utilitzarem per poder allotjar el nostre lloc web.
+        </p>
+        <p class="enunciat-reto-p">
+          Estarem utilitzant el domini configurat a l'anterior apartat <a class="b-verde" href="#dns">DNS, és important que el nostre servei DNS estigui correctament instal·lat i en funcionament.</a>
+        </p>
+        
+        <h4 class="enunciat-reto-titulo2">Windows Server</h4>
+        <p class="enunciat-reto-p">A continuació tindreu un <a class="b-verde" href="manual/manual-windows-ftp.pdf" target="_blank">manual</a> de com fer tota aquesta configuració.</p>
+        <div class="enunciat-reto-centro">
+          <embed src="manual/manual-windows-iis.pdf" class="embed-manual">
+        </div>
+
+        <h4 class="enunciat-reto-titulo2">Ubuntu Server</h4>
+        <ul>
+          <li class="enunciat-lista">És important que s'hagin seguit les instruccions de com mantenir el programari actualitzat i com configurar una IP estàtica per al servidor. Tot això explicat a l'apartat <a class="b-verde" href="#dhcp">DHCP</a>.</li>
+        </ul>
+
+        <p class="enunciat-reto-p">Per començar instal·larem el paquet Apache.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p43">sudo apt install -y apache2</p>
+            <button class="terminal-button" onclick="myFunction('p43')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Primer de tot haurem de emmagatzemar els nostres arxius de la web (html, css...) al directori <b class="b-verde">/var/www/html</b> i esborrar els anteriors arxius. Seguidament crearem un certificat autosignat pel nostre lloc web, haurem d'executar la següent comanda dins del directori <b class="b-verde">/etc/apache2/sites-available</b>.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p44">sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout escolalabdoo.key -out escolalabdoo.crt</p>
+            <button class="terminal-button" onclick="myFunction('p44')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Ara passarem a modificar la configuració.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p52">sudo nano /etc/apache2/sites-available/default-ssl.conf</p>
+            <button class="terminal-button" onclick="myFunction('p52')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <img src="images/archivo-sslconf-apache.png" alt="Arxiu ssl.conf de Apache a Ubuntu" class="I-dhcp">
+        </div>
+
+        <p class="enunciat-reto-p">Un cop acabada la configuració, canviarem el nom de l'arxiu.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p45">sudo cp default-ssl.conf escolalabdoo.conf</p>
+            <button class="terminal-button" onclick="myFunction('p45')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per aplicar els canvis habilitarem el nostre arxiu nou, deshabilitarem l'anterior i reiniciarem el servei apache.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p46">sudo a2dissite 000-default.conf && sudo a2ensite escolalabdoo.conf</p>
+            <button class="terminal-button" onclick="myFunction('p46')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p47">sudo systemctl reload apache2</p>
+            <button class="terminal-button" onclick="myFunction('p47')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per acabar habilitarem els protocols necessaris.</p>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p48">sudo ufw allow http</p>
+            <button class="terminal-button" onclick="myFunction('p48')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+        <div class="enunciat-reto-centro">
+          <div class="terminal">
+            <p class="sudo" id="p49">sudo ufw allow https</p>
+            <button class="terminal-button" onclick="myFunction('p49')"><img src="images/clipboard.png" class="terminal-icono"></button>
+          </div>
+        </div>
+
+        <p class="enunciat-reto-p">Per comprovar que està tot correctament funcionant, ens conectarem des d'un client i buscarem la web des d'un navegador.</p>
+        <div class="enunciat-reto-centro">
+          <img src="images/certificat-ubuntu.png" alt="Certificat SSL d'Ubuntu" class="I-dhcp">
+        </div>
+        
+
+      </div>
+    </section>
+
+
+        <!--           Footer           -->
+
+        <footer>
+          <p>Copyright © 2024 - SMIX2A | Ivory, Chenxiao, Sergio, Lucas<br>Tots els drets reservats.</p>
+          <ul class="footer-listas">
+            <li class="footer-lista"><a href="https://www.youtube.com/user/LabdooDACH" target="_blank"><img src="images/youtube.png" alt="Youtube" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.facebook.com/Labdoo/" target="_blank"><img src="images/facebook.png" alt="Facebook" class="icono-footer"></a></li>
+            <li class="footer-lista"><a href="https://www.linkedin.com/company/labdoo.org/about/" target="_blank"><img src="images/linkedin.png" alt="Linkedin" class="icono-footer"></a></li>
+          </ul>
+        </footer>
+      </body>
+    </html>

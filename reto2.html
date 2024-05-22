@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/boladelmundo.png">
+    <title>Disseny i implementació - Projecte Labdoo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    
+    <!--          Header          -->
+
+    <header class="header">
+        <div class="container">
+        <div class="divlogo">
+            <a href="index.html"><img src="images/logo-labdoo.png" alt="Logo Labdoo" class="logo_labdoo"></a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link"><a href="index.html"><img src="images/homepage.png" class="icono-navbar"></a></li>
+                <li class="nav-link"><a href="formulario.html"><img src="images/formulario.png" class="icono-navbar"></a></li>      
+                <li class="nav-link"><a href="equipo.html"><img src="images/equipo.png" class="icono-navbar"></a></li> 
+                <li class="nav-link-d"><img src="images/menu.png" class="icono-navbar">
+                    <div class="dropdown-content">
+                      <a href="reto1.html" class="no-active-reto">Elecció de la infraestructura</a>
+                      <a href="reto2.html" class="active-reto">Disseny i implementació de la infraestructura física i lògica</a>
+                      <a href="reto3.html" class="no-active-reto">Instal·lació dels servidors</a>
+                      <a href="reto4.html" class="no-active-reto">Creació d'usuaris i gestió de permisos i polítiques i directives</a>
+                      <a href="reto6.html" class="no-active-reto">Manteniment del nostre servidor</a>
+                      <a href="reto7.html" class="no-active-reto">Documentació web del projecte</a>
+                      <a href="reto8.html" class="no-active-reto">Protecció de la nostra xarxa</a>
+                      <a href="reto9.html" class="no-active-reto">Protecció de les nostres dades</a>
+                      <a href="reto10.html" class="no-active-reto">Implementació de servidors Linux i Windows</a>
+                      <a href="reto5.html" class="no-active-reto">Sanejament de portàtils Labdoo</a>
+                      </div>
+                </li>            
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div class="flecha-index">
+      <a href="#index">
+          <img src="images/flecha.png" class="flecha-index">
+      </a>
+    </div>
+
+      <!--             Section        -->
+    <section class="section-retos-enunciat">
+      <header class="headerfase">
+          <h2>DISSENY I IMPLEMENTACIÓ DE LA INFRAESTRUCTURA FÍSICA I LÒGICA</h2>
+      </header>
+      <div class="enunciat-reto-70">
+          <p class="enunciat-reto-titulo">Els objectius d'aquest repte són:</p>
+          <p class="enunciat-reto-p">
+            En base a la topologia triada a la secció "Elecció de la infraestructura" ja podem passar a fer el disseny de la infraestructura. 
+            Primer de tot és condició necessària i imprescindible que justifiqueu qualsevol decisió de disseny que trieu. 
+            El client ens demana un <a href="https://drive.google.com/file/d/1F8LdSoLIXYWjXdpArOVtpE2QcEGxHevP/view" target="_blank">plànol</a> (fet amb packet tracer) amb el disseny físic i lògic de la xarxa
+          <br>
+          Per fer aquest disseny hem de tenir en compte que:
+          La sala de servidors estarà ubicada a l’aula que vosaltres heu proposat.
+          Les aules tindran el següent número d’ordinadors:
+          </p>
+          <ul>
+            <li class="enunciat-lista">Aula 2.1: 18 ordinadors</li>
+            <li class="enunciat-lista">Aula 2.2: 26 ordinadors</li>
+            <li class="enunciat-lista">Aula 2.3: 30 ordinadors</li>
+            <li class="enunciat-lista">Aula 2.4: 30 ordinadors</li>
+            <li class="enunciat-lista">Aula 2.5: 30 ordinadors</li>
+          </ul>
+      </div>
+      <div class="div-planol-pr">
+        <img src="images/packet-tracer.png" alt="Image de Cisco Packet Tracer" class="I-topologia">
+      </div>
+      <div class="enunciat-reto">
+        <p class="enunciat-reto-p">
+          Hem d'explicar i justificar tots els elements físics (cablejat, armaris…) i lògics (software de servidor, protocols de comunicacions..) que implementarem a la solució. 
+          A més, detallar totes les característiques dels elements triats en el punt anterior i la raó de perquè els hem triat.
+          Hem de fer un pressupost tant del material físic (racks, canaletes, connectors, cables, rj45…) com del material lògic que utilitzarem (només la part de servidors, sais i punts d’accés).
+          Les aules hauran de suportar tan connexió de xarxa com wifi. Tots els equips podran connectar-se de les dues maneres.
+        </p> 
+        <ul>
+          <li class="enunciat-lista">Hem de definir la xarxa wifi:</li>
+          <li class="enunciat-lista2">Decidir on col·locar els punts d'accés per tenir la màxima cobertura.</li>
+          <li class="enunciat-lista2">Implementar i configurar els punts d’accés en el disseny.</li>
+          <li class="enunciat-lista">Hem definir l’armari o armaris de xarxes que utilitzarem.</li>
+          <li class="enunciat-lista2">Definir les característiques de l’armari</li>
+          <li class="enunciat-lista2">Definir la distribució dels elements dins del rack</li>
+          <li class="enunciat-lista2">Definir la ubicació del rack</li>
+          <li class="enunciat-lista2">Incloure en el pressupost anterior</li>
+        </ul>
+      </div>
+
+      <div class="div-index" id="index">
+        <header class="headerfase">
+          <h2>CONTINGUT</h2>
+        </header>
+        <ul class="ul-index">
+          <li class="li-index"><a href="#dissenyinfraestructura">Disseny</a></li>
+          <li class="li-index"><a href="#pressupost">Pressupost</a></li>
+        </ul>
+      </div>
+
+      <div class="div-futuro-a" id="dissenyinfraestructura">
+          <h3 class="enunciat-reto-titulo">DISSENY</h3>
+          <ul>
+            <li class="enunciat-lista">Aula 2.1</li>
+            <li class="enunciat-lista2">En aquesta aula hi hauran 4 ordinadors per taula i al costat de cada taula n’hi ha una canaleta, totes les canaletes passen per la paret i arriben al rack, que està situat en la paret del fons de l’aula. L’acces point està situat cap a l’esquerra de l’aula.  Aquesta aula té 1 Switch.</li>
+            <li class="enunciat-lista">Aula 2.2</li>
+            <li class="enunciat-lista2">En aquesta aula hi hauran 4 ordinadors per taula i al costat de cada taula n’hi ha una canaleta, 5 de las 7 canaletes van per sota terra fins al rack i els altres 2 passen per la paret. El rack està situat al costat de la paret que conecta la Server Room i l’aula 2.2. L’acces point està sobre la taula del professor. Aquesta aula té 2 Switches.</li>
+            <li class="enunciat-lista">Aula 2.3</li>
+            <li class="enunciat-lista2">En aquesta aula hi hauran 4 ordinadors per taula i n’hi ha una taula amb dos ordinadors, l’acces point està en la meitat de l’aula per arribar a tots els ordinadors. Totes les caneletes passen per la paret però n’hi ha 4 que passen per sota terra i tornen a passar per la paret. El rack està al costat de la porta d’entrada de l’aula. Aquesta aula té 2 Switches.</li>
+            <li class="enunciat-lista">Aula 2.4</li>
+            <li class="enunciat-lista2">En aquesta aula hi hauran 2 ordinadors per taula però cada dos taules comparteixen una canaleta. Les canaletes passaran per la paret fins al rack que esta situat a la dreta de l’aula. L’acces point estarà situat dins del rack. Aquesta aula té 2 Switches.</li>
+            <li class="enunciat-lista">Aula 2.5</li>
+            <li class="enunciat-lista2">Aquesta aula és igual a la 2.4, però el rack i l'acces point estan situats a la paret de l’esquerra. Aquesta aula té 2 Switches.</li>
+          </ul>
+        <div class="div-media-futuro">
+          <img src="images/fisica.png" class="I-infraestructura" alt="Disseny de la infraestructura física">
+        </div>
+        <div class="div-media-futuro">
+          <img src="images/logica.png" class="I-infraestructura" alt="Disseny de la infraestructura lògica">
+        </div>
+          <p class="enunciat-reto-p-b">Disseny de la infraestructura física</p>
+          <p class="enunciat-reto-p-b">Disseny de la infraestructura lògica</p>
+      </div>
+      
+      <div class="div-pressupost" id="pressupost">
+      <h3 class="enunciat-reto-titulo">PRESSUPOST PROJECTE LABDOO</h3>
+              <div class="enunciat-reto-centro">
+              <table class="table-pressupost">
+              <tr>
+                <th colspan="5">PRESSUPOST</th>
+              </tr>
+              <tr class="tr-bold">
+                <td>Article</td>
+                <td>Marca i model</td>
+                <td>Quantitat</td>
+                <td>Preu (u)</td>
+                <td>Preu total</td>
+              </tr>
+              <tr>
+                <td>Aula</td>
+                <td><a href="https://docs.google.com/spreadsheets/d/1MMHCxqu-Q5qR56gluLFjQLiI65sJP92Hz9ljeW7UW4U/edit#gid=0" target="_blank">Aula 2.1</a></td>
+                <td>1</td>
+                <td>885.56€</td>
+                <td>885.56€</td>
+              </tr>
+              <tr>
+                <td>Aula</td>
+                <td><a href="https://docs.google.com/spreadsheets/d/1MMHCxqu-Q5qR56gluLFjQLiI65sJP92Hz9ljeW7UW4U/edit#gid=440195991" target="_blank">Aula 2.2</a></td>
+                <td>1</td>
+                <td>799,81€</td>
+                <td>799,81€</td>
+              </tr>
+              <tr>
+                <td>Aula</td>
+                <td><a href="https://docs.google.com/spreadsheets/d/1MMHCxqu-Q5qR56gluLFjQLiI65sJP92Hz9ljeW7UW4U/edit#gid=1403837152" target="_blank">Aula 2.3</a></td>
+                <td>1</td>
+                <td>1.108,81€</td>
+                <td>1.108,81€</td>
+              </tr>
+              <tr>
+                <td>Aula</td>
+                <td><a href="https://docs.google.com/spreadsheets/d/1MMHCxqu-Q5qR56gluLFjQLiI65sJP92Hz9ljeW7UW4U/edit#gid=1959721413" target="_blank">Aula 2.4</a></td>
+                <td>1</td>
+                <td>1.133,51€</td>
+                <td>1.133,51 €</td>
+              </tr>
+              <tr>
+                <td>Aula</td>
+                <td><a href="https://docs.google.com/spreadsheets/d/1MMHCxqu-Q5qR56gluLFjQLiI65sJP92Hz9ljeW7UW4U/edit#gid=1160282015" target="_blank">Aula 2.5</a></td>
+                <td>1</td>
+                <td>1.133,51€</td>
+                <td>1.133,51 €</td>
+              </tr>
+              <tr>
+                <td>Llicència</td>
+                <td>Llicència de Windows Server 2016</td>
+                <td>1</td>
+                <td>250€</td>
+                <td>250€</td>
+              </tr>
+              <tr>
+                <td>Rack central</td>
+                <td><a href="https://es.aliexpress.com/item/1005006039707866.html?src=google&aff_fcid=9fcb9d3f70c1450f8cab34771679ca71-1696494458880-09715-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=9fcb9d3f70c1450f8cab34771679ca71-1696494458880-09715-UneMJZVf&terminal_id=a8762a6522bf43e7b4d473f09de7ca94&afSmartRedirect=y&gatewayAdapt=glo2esp" target="_blank">Estante de servidor de pared de vidrio</a></td>
+                <td>1</td>
+                <td>176,35€</td>
+                <td>176,35€</td>
+              </tr>
+              <tr>
+                <td>Switch</td>
+                <td><a href="https://www.amazon.es/MERCUSYS-MS108G-8-Port-Desktop-Plastic/dp/B07RGY1NBY/ref=sr_1_6?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2EXKHZI0JYJVK&keywords=switch+6+puertos&qid=1698664395&s=computers&sprefix=switch+6puerto%2Ccomputers%2C103&sr=1-6" target="_blank">MERCUSYS MS108G - Switch Gigabit RJ45 de 8 Puertos</a></td>
+                <td>1</td>
+                <td>14,80€</td>
+                <td>14,80€</td>
+              </tr>
+              <tr>
+                <td>Taula</td>
+                <td><a href="https://www.ikea.com/es/es/p/linnmon-adils-mesa-blanco-s29932181/" target="_blank">Mesa, blanco, 100x60 cm</a></td>
+                <td>1</td>
+                <td>29,00€</td>
+                <td>29,00€</td>
+              </tr>
+              <tr>
+                <td>Router</td>
+                <td><a href="https://www.pccomponentes.com/tp-link-archer-ax50-router-wifi-6-ax3000-doble-banda-gigabit-mu-mimo-ofdma-usb-30?campaigntype=eshopping&campaignchannel=shopping&gad_source=1&gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzopORtiOPf-7QPDmUYZzk707JCXFGU7Y3ruVMPukBfg2xJ2gdX3phsaAnuEEALw_wcB" target="_blank">TP-Link Archer AX50 Router WiFi 6</a></td>
+                <td>1</td>
+                <td>69,00€</td>
+                <td>69,00€</td>
+              </tr>
+              <tr>
+                <td>Servidor</td>
+                <td><a href="https://www.pccomponentes.com/dell-poweredge-t40-intel-xeon-e-2224g-8-gb-1tb" target="_blank">Dell PowerEdge T40 Intel Xeon E-2224G/8 GB/1TB</a></td>
+                <td>1</td>
+                <td>669,00€</td>
+                <td>669,00€</td>
+              </tr>
+              <tr>
+                <td>Cable</td>
+                <td><a href="https://www.amazon.es/Bobina-Cable-Cat-6-Televes-DK6000/dp/B085ZG5J55" target="_blank">Bobina 500m Cable UTP Cat.6 Dca LSFH Televes DK6000</a></td>
+                <td>4</td>
+                <td>254,10€</td>
+                <td>254,10€</td>
+              </tr>
+              <tr>
+                <td>Cable</td>
+                <td><a href="https://www.amazon.es/Mr-Tronic-Instalaci%C3%B3n-Ethernet-Bobina/dp/B07SQXH7B1/ref=pd_lpo_sccl_1/262-8763172-2223814?pd_rd_w=SwBu3&content-id=amzn1.sym.77ceffbc-2315-45af-a132-add588fc5fe3&pf_rd_p=77ceffbc-2315-45af-a132-add588fc5fe3&pf_rd_r=HZNR0H0D9V2WPMSDFS3T&pd_rd_wg=X7k1L&pd_rd_r=9e6eef68-f285-4807-890e-b91a11e4414d&pd_rd_i=B07LGCDKZB&th=1" target="_blank">Mr. Tronic Granel Cable Ethernet Cat 6 De 200m</a></td>
+                <td>1</td>
+                <td>85,99€</td>
+                <td>85,99€</td>
+              </tr>
+              <tr>
+                <td>Reforma</td>
+                <td><a href="https://www.cronoshare.com/cuanto-cuesta/hacer-pared-pladur#:~:text=Hoy%20en%20d%C3%ADa%20levantar%20un%20tabique%20de%20pladur,parte%20y%20de%20manera%20totalmente%20gratuita%20para%20ti" target="_blank">Instalació pared</a></td>
+                <td>15</td>
+                <td>32,50€</td>
+                <td>32,50€</td>
+              </tr>
+              <tr>
+                <td>Aclimatització</td>
+                <td><a href="https://www.climamania.com/blog/precio-instalacion-aire-acondicionado/" target="_blank">Aire acondicionado</a></td>
+                <td>1</td>
+                <td>499,00€</td>
+                <td>499,00€</td>
+              </tr>
+              <tr>
+                <td>Aclimatització</td>
+                <td><a href="https://www.reiteman.com/cuanto-cuesta-reformar-un-bano-de-5-m2-presupuesto-paso-a-paso/" target="_blank">Instalació aire</a></td>
+                <td>1</td>
+                <td>320,00€</td>
+                <td>320,00€</td>
+              </tr>
+              <tr>
+                <td>Má de obra</td>
+                <td>Tècnic de xarxes, instal·lació i cablejat de xarxa</td>
+                <td>240</td>
+                <td>20,00€</td>
+                <td>4.800,00€</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total (IVA inclòs)</td>
+                <td>13.479,23€</td>
+              </tr>
+            </table>
+          </div>
+      </div>
+      
+    </section>
+ <!--           Footer           -->
+
+ <footer>
+  <p>Copyright © 2024 - SMIX2A | Ivory, Chenxiao, Sergio, Lucas<br>Tots els drets reservats.</p>
+  <ul class="footer-listas">
+    <li class="footer-lista"><a href="https://www.youtube.com/user/LabdooDACH" target="_blank"><img src="images/youtube.png" alt="Youtube" class="icono-footer"></a></li>
+    <li class="footer-lista"><a href="https://www.facebook.com/Labdoo/" target="_blank"><img src="images/facebook.png" alt="Facebook" class="icono-footer"></a></li>
+    <li class="footer-lista"><a href="https://www.linkedin.com/company/labdoo.org/about/" target="_blank"><img src="images/linkedin.png" alt="Linkedin" class="icono-footer"></a></li>
+  </ul>
+</footer>
+</body>
+</html>
